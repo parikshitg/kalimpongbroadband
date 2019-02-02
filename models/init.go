@@ -10,7 +10,8 @@ var DBFile = "kalimpongbroadband.db"
 var DB *boltdb.DB
 
 func init() {
-	if DB, err := boltdb.Open("db/" + DBFile); err != nil {
+	var err error
+	if DB, err = boltdb.Open("db/" + DBFile); err != nil {
 		log.Fatal(err)
 	}
 }

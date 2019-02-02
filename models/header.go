@@ -1,10 +1,5 @@
 package models
 
-import (
-	"fmt"
-	"log"
-)
-
 type Header struct {
 	ID   uint64 `json:"id"`
 	Slug string `json:"slug"`

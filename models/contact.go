@@ -1,10 +1,5 @@
 package models
 
-import (
-	"fmt"
-	"log"
-)
-
 type Contact struct {
 	Name     string `json:"name"`
 	Phone1   string `json:"phone1"`
