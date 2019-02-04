@@ -10,4 +10,5 @@ type HomeController struct {
 
 func (c *HomeController) Get() {
 	c.TplName = "page/home.tpl"
+
 }
