@@ -1,4 +1,4 @@
-package controllers
+package admin
 
 import (
 	"github.com/urantiatech/beego"
@@ -9,5 +9,6 @@ type AdminController struct {
 }
 
 func (c *AdminController) Get() {
-	c.TplName = "admin/page/login.tpl"
+	c.TplName = "admin/dashboard.tpl"
+	c.Data["Title"] = "dashboard"
 }
