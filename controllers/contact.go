@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"git.urantiatech.com/commercial/kalimpongbroadband/contents"
 	"github.com/urantiatech/beego"
 )
 
@@ -8,15 +9,27 @@ type ContactController struct {
 	beego.Controller
 }
 
-func (c *ContactController) Get() {
-	var err error
-	c.TplName = "page/contact.tpl"
+func (this *ContactController) Get() {
+	var contact = &contents.Contact{}
+	this.TplName = "contact/contact.tpl"
 
-	// db.List(bucket)
-	c.Data["Contact"], err = db.List("contacts")
+	err := contact.Read("contact")
 	if err != nil {
-		c.Data["Error"] = err.Error()
-		c.TplName = "page/error.tpl"
+		this.Data["Error"] = err.Error()
+		return
+	}
+	this.Data["Contact"] = contact
+}
+
+func (this *ContactController) Post() {
+	this.TplName = "admin/contact.tpl"
+
+	contact := &contents.Contact{
+		Slug: "contact",
 	}
 
+	err := contact.Store("contact")
+	if err != nil {
+		this.Data["Error"] = err.Error()
+	}
 }

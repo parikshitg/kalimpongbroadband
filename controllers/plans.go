@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"git.urantiatech.com/commercial/kalimpongbroadband/contents"
 	"github.com/urantiatech/beego"
 )
 
@@ -8,15 +9,28 @@ type PlansController struct {
 	beego.Controller
 }
 
-func (c *PlansController) Get() {
-	var err error
-	c.TplName = "page/plans.tpl"
+func (this *PlansController) Get() {
+	var page = &contents.Plan{}
+	this.TplName = "page/plans.tpl"
 
-	// db.List(bucket)
-	c.Data["Plans"], err = db.List("plans")
+	err := page.Read("plans")
 	if err != nil {
-		c.Data["Error"] = err.Error()
-		c.TplName = "page/error.tpl"
+		this.Data["Error"] = err.Error()
+		return
+	}
+	this.Data["Plan"] = page
+}
+
+func (this *PlansController) Post() {
+	this.TplName = "admin/plans.tpl"
+
+	page := &contents.Plan{
+		Slug:  "plans",
+		Title: "Broadband Plans",
 	}
 
+	err := page.Store("plans")
+	if err != nil {
+		this.Data["Error"] = err.Error()
+	}
 }

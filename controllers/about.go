@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"git.urantiatech.com/commercial/kalimpongbroadband/contents"
 	"github.com/urantiatech/beego"
 )
 
@@ -8,14 +9,31 @@ type AboutController struct {
 	beego.Controller
 }
 
-func (c *AboutController) Get() {
-	var err error
-	c.TplName = "page/about.tpl"
+func (this *AboutController) Get() {
+	var page = &contents.Page{}
 
-	// db.Read(bucket, slug)
-	c.Data["Page"], err = db.Read("pages", "about")
+	this.TplName = "page/about.tpl"
+	this.Data["Title"] = "Settings"
+
+	err := page.Read("about")
 	if err != nil {
-		c.Data["Error"] = err.Error()
-		c.TplName = "page/error.tpl"
+		this.Data["Error"] = err.Error()
+		return
+	}
+	this.Data["Page"] = page
+}
+
+func (this *AboutController) Post() {
+	this.TplName = "admin/about.tpl"
+
+	page := &contents.Page{
+		Slug:  "about",
+		Title: "About Us",
+		Body:  this.GetString("body"),
+	}
+
+	err := page.Store("about")
+	if err != nil {
+		this.Data["Error"] = err.Error()
 	}
 }

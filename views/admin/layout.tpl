@@ -15,7 +15,8 @@
   <link rel="stylesheet" href="/badmin/fontawesome/css/font-awesome.min.css">
 
   <link rel="stylesheet" href="/badmin/dist/main.css">
-
+  <link rel="stylesheet" type="text/css" href="/badmin/trix/trix.css">
+  <script type="text/javascript" src="/badmin/trix/trix.js"></script>
 </head>
 
 <body>
@@ -50,7 +51,9 @@
             </div>
           </div>
         </div>
+
         {{ block "contents" . }} {{ end }}
+        
       </main>
 
     </div>
