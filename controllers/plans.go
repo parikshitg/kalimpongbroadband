@@ -29,7 +29,7 @@ func (this *PlansController) Post() {
 		Title: "Broadband Plans",
 	}
 
-	err := page.Store("plans")
+	err := page.Write("plans")
 	if err != nil {
 		this.Data["Error"] = err.Error()
 	}

@@ -28,7 +28,7 @@ func (this *ContactController) Post() {
 		Slug: "contact",
 	}
 
-	err := contact.Store("contact")
+	err := contact.Write("contact")
 	if err != nil {
 		this.Data["Error"] = err.Error()
 	}

@@ -39,7 +39,7 @@ func (this *Page) Read(slug string) error {
 	return nil
 }
 
-func (this *Page) Store(slug string) error {
+func (this *Page) Write(slug string) error {
 	// Create a read-write transaction.
 	if err := db.Update(func(tx *bolt.Tx) error {
 		b := tx.Bucket([]byte(PageBucket))

@@ -30,7 +30,7 @@ func (this *PartnersController) Post() {
 		Body:  this.GetString("body"),
 	}
 
-	err := page.Store("partners")
+	err := page.Write("partners")
 	if err != nil {
 		this.Data["Error"] = err.Error()
 	}

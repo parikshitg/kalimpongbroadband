@@ -39,7 +39,7 @@ func (this *Service) Read(slug string) error {
 	return nil
 }
 
-func (this *Service) Store(slug string) error {
+func (this *Service) Write(slug string) error {
 	// Create a read-write transaction.
 	if err := db.Update(func(tx *bolt.Tx) error {
 		b := tx.Bucket([]byte(ServiceBucket))

@@ -32,7 +32,7 @@ func (this *AboutController) Post() {
 		Body:  this.GetString("body"),
 	}
 
-	err := page.Store("about")
+	err := page.Write("about")
 	if err != nil {
 		this.Data["Error"] = err.Error()
 	}

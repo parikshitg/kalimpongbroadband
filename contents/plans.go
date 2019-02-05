@@ -42,7 +42,7 @@ func (this *Plan) Read(slug string) error {
 	return nil
 }
 
-func (this *Plan) Store(slug string) error {
+func (this *Plan) Write(slug string) error {
 	// Create a read-write transaction.
 	if err := db.Update(func(tx *bolt.Tx) error {
 		b := tx.Bucket([]byte(PlanBucket))
