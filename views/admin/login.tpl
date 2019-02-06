@@ -16,37 +16,37 @@
         <div class="hero-body">
             <div class="container has-text-centered">
                 <div class="column is-4 is-offset-4">
-                    <h3 class="title has-text-grey">Admin Login</h3>
-                    <p class="subtitle has-text-grey">Please login to proceed.</p>
+                    <h3 class="title has-text-grey">{{ .Title }}</h3>
+                    {{ with .Error }}
+                    <p class="subtitle has-text-grey">{{ . }}</p>
+                    {{ end }}
                     <div class="box">
                         <figure class="avatar">
                             <img src="/badmin/hunabku.png">
                         </figure>
-                        <form>
+                        <form method="POST" action="/admin">
                             <div class="field">
                                 <div class="control">
-                                    <input class="input is-large" type="email" placeholder="Your Email" autofocus="">
+                                    <input class="input is-large" name="username" type="username" placeholder="Username" autofocus="">
                                 </div>
                             </div>
 
                             <div class="field">
                                 <div class="control">
-                                    <input class="input is-large" type="password" placeholder="Your Password">
+                                    <input class="input is-large" name="password" type="password" placeholder="Password">
                                 </div>
                             </div>
                             <div class="field">
                                 <label class="checkbox">
-                  <input type="checkbox">
-                  Remember me
-                </label>
+                                    <input type="checkbox">
+                                      Remember me
+                                    </label>
                             </div>
                             <button class="button is-block is-info is-large is-fullwidth">Login</button>
                         </form>
                     </div>
                     <p class="has-text-grey">
-                        <a href="../">Sign Up</a> &nbsp;·&nbsp;
-                        <a href="../">Forgot Password</a> &nbsp;·&nbsp;
-                        <a href="../">Need Help?</a>
+                        Powered by <a href="https://www.urantiatech.com">UrantiaTech</a> 
                     </p>
                 </div>
             </div>

@@ -1,6 +1,8 @@
 package controllers
 
 import (
+	"net/http"
+
 	"github.com/urantiatech/beego"
 )
 
@@ -9,6 +11,10 @@ type LogoutController struct {
 }
 
 func (this *LogoutController) Get() {
-	this.TplName = "admin/dashboard.tpl"
-	this.Data["Title"] = "Dashboard"
+	// Set Empty Auth Cookie
+	signkey := beego.AppConfig.String("signkey")
+	this.SetSecureCookie(signkey, "AuthCookie", "")
+
+	// Redirect to login page
+	this.Redirect("/admin", http.StatusSeeOther)
 }

@@ -1,5 +1,9 @@
 {{ template "layout/layout.tpl" . }}
 
 {{ define "contents" }}
-<h1>Our Partners</h1>
+	{{ if .Error }}{{ .Error}}{{ end }}
+	{{ if .Page }}
+		<h1>{{ .Page.Title }}</h1>
+		{{ .HtmlBody }}
+	{{ end }}
 {{ end }}

@@ -1,3 +1,7 @@
 appname = kalimpongbroadband
 httpport = 8080
 runmode = prod
+
+adminuser = admin
+adminpass = secret
+signkey = 32-byte-signing-key

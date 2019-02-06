@@ -8,23 +8,23 @@ import (
 	"github.com/urantiatech/beego"
 )
 
-type PartnersController struct {
+type ProductsController struct {
 	beego.Controller
 }
 
-func (this *PartnersController) Get() {
+func (this *ProductsController) Get() {
 	var page = &contents.Page{}
-	this.TplName = "page/partners.tpl"
-	this.Data["Title"] = "Our Partners"
+	this.TplName = "page/products.tpl"
+	this.Data["Title"] = "Our Products"
 
-	if this.Ctx.Request.URL.String() == "/admin/partners" {
+	if this.Ctx.Request.URL.String() == "/admin/products" {
 		if err := Authenticate(this.Ctx); err != nil {
 			this.Redirect("/admin", http.StatusSeeOther)
 		}
-		this.TplName = "admin/partners.tpl"
+		this.TplName = "admin/products.tpl"
 	}
 
-	err := page.Read("partners")
+	err := page.Read("products")
 	if err != nil {
 		this.Data["Error"] = err.Error()
 		return
@@ -33,17 +33,17 @@ func (this *PartnersController) Get() {
 	this.Data["HtmlBody"] = template.HTML(page.Body)
 }
 
-func (this *PartnersController) Post() {
-	this.TplName = "admin/partners.tpl"
-	this.Data["Title"] = "Our Partners"
+func (this *ProductsController) Post() {
+	this.TplName = "admin/products.tpl"
+	this.Data["Title"] = "Our Products"
 
 	page := &contents.Page{
-		Slug:  "partners",
+		Slug:  "products",
 		Title: this.Data["Title"].(string),
 		Body:  this.GetString("body"),
 	}
 
-	err := page.Write("partners")
+	err := page.Write("products")
 	if err != nil {
 		this.Data["Error"] = err.Error()
 	}

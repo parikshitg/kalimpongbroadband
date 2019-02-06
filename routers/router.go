@@ -11,6 +11,7 @@ func init() {
 	beego.Router("/about", &controllers.AboutController{})
 	beego.Router("/services", &controllers.ServicesController{})
 	beego.Router("/plans", &controllers.PlansController{})
+	beego.Router("/products", &controllers.ProductsController{})
 	beego.Router("/partners", &controllers.PartnersController{})
 	beego.Router("/contact", &controllers.ContactController{})
 
@@ -20,19 +21,22 @@ func init() {
 	beego.SetStaticPath("/img", "static/img")
 	beego.SetStaticPath("/fonts", "static/fonts")
 
-	// Admin routes
-	beego.Router("/admin", &controllers.AdminController{})
-	beego.Router("/admin/dashboard", &controllers.DashboardController{})
-	beego.Router("/admin/about", &controllers.AboutController{})
-	beego.Router("/admin/services", &controllers.ServicesController{})
-	beego.Router("/admin/plans", &controllers.PlansController{})
-	beego.Router("/admin/partners", &controllers.PartnersController{})
-	beego.Router("/admin/contact", &controllers.ContactController{})
-	beego.Router("/admin/settings", &controllers.SettingsController{})
-	beego.Router("/admin/logout", &controllers.LogoutController{})
+	if beego.AppConfig.String("adminuser") != "" &&
+		beego.AppConfig.String("adminpass") != "" {
+		// Admin routes
+		beego.Router("/admin", &controllers.AdminController{})
+		beego.Router("/admin/about", &controllers.AboutController{})
+		beego.Router("/admin/services", &controllers.ServicesController{})
+		beego.Router("/admin/plans", &controllers.PlansController{})
+		beego.Router("/admin/products", &controllers.ProductsController{})
+		beego.Router("/admin/partners", &controllers.PartnersController{})
+		beego.Router("/admin/contact", &controllers.ContactController{})
+		beego.Router("/admin/settings", &controllers.SettingsController{})
+		beego.Router("/admin/logout", &controllers.LogoutController{})
 
-	// Admin static files
-	beego.SetStaticPath("/badmin", "static/badmin")
+		// Admin static files
+		beego.SetStaticPath("/badmin", "static/badmin")
+	}
 
 	beego.ErrorController(&controllers.ErrorController{})
 

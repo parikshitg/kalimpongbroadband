@@ -1,6 +1,9 @@
 package controllers
 
 import (
+	"html/template"
+	"net/http"
+
 	"git.urantiatech.com/commercial/kalimpongbroadband/contents"
 	"github.com/urantiatech/beego"
 )
@@ -10,26 +13,39 @@ type ContactController struct {
 }
 
 func (this *ContactController) Get() {
-	var contact = &contents.Contact{}
-	this.TplName = "contact/contact.tpl"
+	var page = &contents.Page{}
+	this.TplName = "page/contact.tpl"
+	this.Data["Title"] = "Contact Us"
 
-	err := contact.Read("contact")
+	if this.Ctx.Request.URL.String() == "/admin/contact" {
+		if err := Authenticate(this.Ctx); err != nil {
+			this.Redirect("/admin", http.StatusSeeOther)
+		}
+		this.TplName = "admin/contact.tpl"
+	}
+
+	err := page.Read("contact")
 	if err != nil {
 		this.Data["Error"] = err.Error()
 		return
 	}
-	this.Data["Contact"] = contact
+	this.Data["Page"] = page
+	this.Data["HtmlBody"] = template.HTML(page.Body)
 }
 
 func (this *ContactController) Post() {
 	this.TplName = "admin/contact.tpl"
+	this.Data["Title"] = "Contact Us"
 
-	contact := &contents.Contact{
-		Slug: "contact",
+	page := &contents.Page{
+		Slug:  "contact",
+		Title: this.Data["Title"].(string),
+		Body:  this.GetString("body"),
 	}
 
-	err := contact.Write("contact")
+	err := page.Write("contact")
 	if err != nil {
 		this.Data["Error"] = err.Error()
 	}
+	this.Data["Page"] = page
 }

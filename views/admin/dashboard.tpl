@@ -5,7 +5,7 @@
           <div class="column">
             <div class="box notification is-primary">
               <div class="heading">Top Seller Total</div>
-              <div class="title">56,950</div>
+              <div class="title">56,980</div>
               <div class="level">
                 <div class="level-item">
                   <div class="">
