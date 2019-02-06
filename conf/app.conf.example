@@ -4,4 +4,4 @@ runmode = prod
 
 adminuser = admin
 adminpass = secret
-signkey = 32-byte-signing-key
+signkey = 32-byte-randomstring-signing-key
