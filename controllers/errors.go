@@ -10,13 +10,13 @@ type ErrorController struct {
 }
 
 // Error404 handles 404
-func (this *ErrorController) Error404() {
-	this.Data["content"] = "page not found"
-	this.TplName = "page/404.tpl"
+func (ec *ErrorController) Error404() {
+	ec.Data["content"] = "page not found"
+	ec.TplName = "page/404.tpl"
 }
 
 // Error500 handles 500
-func (this *ErrorController) Error500() {
-	this.Data["content"] = "internal server error"
-	this.TplName = "page/500.tpl"
+func (ec *ErrorController) Error500() {
+	ec.Data["content"] = "internal server error"
+	ec.TplName = "page/500.tpl"
 }

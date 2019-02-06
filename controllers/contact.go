@@ -1,51 +1,60 @@
 package controllers
 
 import (
-	"html/template"
 	"net/http"
 
 	"git.urantiatech.com/commercial/kalimpongbroadband/contents"
 	"github.com/urantiatech/beego"
 )
 
+// ContactController definition
 type ContactController struct {
 	beego.Controller
 }
 
-func (this *ContactController) Get() {
-	var page = &contents.Page{}
-	this.TplName = "page/contact.tpl"
-	this.Data["Title"] = "Contact Us"
+// Get request handler
+func (cc *ContactController) Get() {
+	var contact = &contents.Contact{}
+	cc.TplName = "page/contact.tpl"
+	cc.Data["Title"] = "Contact Us"
 
-	if this.Ctx.Request.URL.String() == "/admin/contact" {
-		if err := Authenticate(this.Ctx); err != nil {
-			this.Redirect("/admin", http.StatusSeeOther)
+	if cc.Ctx.Request.URL.String() == "/admin/contact" {
+		if err := Authenticate(cc.Ctx); err != nil {
+			cc.Redirect("/admin", http.StatusSeeOther)
 		}
-		this.TplName = "admin/contact.tpl"
+		cc.TplName = "admin/contact.tpl"
 	}
 
-	err := page.Read("contact")
+	err := contact.Read("contact")
 	if err != nil {
-		this.Data["Error"] = err.Error()
+		cc.Data["Error"] = err.Error()
 		return
 	}
-	this.Data["Page"] = page
-	this.Data["HtmlBody"] = template.HTML(page.Body)
+	cc.Data["Contact"] = contact
 }
 
-func (this *ContactController) Post() {
-	this.TplName = "admin/contact.tpl"
-	this.Data["Title"] = "Contact Us"
+// Post request handler
+func (cc *ContactController) Post() {
+	cc.TplName = "admin/contact.tpl"
+	cc.Data["Title"] = "Contact Us"
 
-	page := &contents.Page{
-		Slug:  "contact",
-		Title: this.Data["Title"].(string),
-		Body:  this.GetString("body"),
+	contact := &contents.Contact{
+		Slug:     "contact",
+		Name:     cc.GetString("name"),
+		Phone1:   cc.GetString("phone1"),
+		Phone2:   cc.GetString("phone2"),
+		Phone3:   cc.GetString("phone3"),
+		WhatsApp: cc.GetString("whatsapp"),
+		Address1: cc.GetString("address1"),
+		Address2: cc.GetString("address2"),
+		City:     cc.GetString("city"),
+		State:    cc.GetString("state"),
+		Email:    cc.GetString("email"),
 	}
 
-	err := page.Write("contact")
+	err := contact.Write(contact.Slug)
 	if err != nil {
-		this.Data["Error"] = err.Error()
+		cc.Data["Error"] = err.Error()
 	}
-	this.Data["Page"] = page
+	cc.Data["Contact"] = contact
 }

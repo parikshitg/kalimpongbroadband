@@ -7,8 +7,10 @@ import (
 	"github.com/boltdb/bolt"
 )
 
+// PageBucket name
 const PageBucket = "pages"
 
+// Page contents
 type Page struct {
 	ID    uint64 `json:"id"`
 	Slug  string `json:"slug"`
@@ -16,7 +18,8 @@ type Page struct {
 	Body  string `json:"body"`
 }
 
-func (this *Page) Read(slug string) error {
+// Read contact information from DB
+func (page *Page) Read(slug string) error {
 	// Create a read-only transaction.
 	if err := db.View(func(tx *bolt.Tx) error {
 		b := tx.Bucket([]byte(PageBucket))
@@ -31,7 +34,7 @@ func (this *Page) Read(slug string) error {
 		}
 
 		// Convert JSON to struct
-		err := json.Unmarshal(item, this)
+		err := json.Unmarshal(item, page)
 		return err
 	}); err != nil {
 		return err
@@ -39,7 +42,8 @@ func (this *Page) Read(slug string) error {
 	return nil
 }
 
-func (this *Page) Write(slug string) error {
+// Write contact information to DB
+func (page *Page) Write(slug string) error {
 	// Create a read-write transaction.
 	if err := db.Update(func(tx *bolt.Tx) error {
 		b := tx.Bucket([]byte(PageBucket))
@@ -48,7 +52,7 @@ func (this *Page) Write(slug string) error {
 		}
 
 		// Convert to JSON
-		item, err := json.Marshal(this)
+		item, err := json.Marshal(page)
 		if err != nil {
 			return err
 		}

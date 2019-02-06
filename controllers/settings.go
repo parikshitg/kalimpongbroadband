@@ -6,15 +6,17 @@ import (
 	"github.com/urantiatech/beego"
 )
 
+// SettingsController definition
 type SettingsController struct {
 	beego.Controller
 }
 
-func (this *SettingsController) Get() {
-	if err := Authenticate(this.Ctx); err != nil {
-		this.Redirect("/admin", http.StatusSeeOther)
+// Get request handler
+func (sc *SettingsController) Get() {
+	if err := Authenticate(sc.Ctx); err != nil {
+		sc.Redirect("/admin", http.StatusSeeOther)
 	}
-	this.TplName = "admin/settings.tpl"
-	this.Data["Title"] = "Settings"
+	sc.TplName = "admin/settings.tpl"
+	sc.Data["Title"] = "Settings"
 
 }

@@ -8,44 +8,47 @@ import (
 	"github.com/urantiatech/beego"
 )
 
+// PartnersController definition
 type PartnersController struct {
 	beego.Controller
 }
 
-func (this *PartnersController) Get() {
+// Get request handler
+func (pc *PartnersController) Get() {
 	var page = &contents.Page{}
-	this.TplName = "page/partners.tpl"
-	this.Data["Title"] = "Our Partners"
+	pc.TplName = "page/partners.tpl"
+	pc.Data["Title"] = "Our Partners"
 
-	if this.Ctx.Request.URL.String() == "/admin/partners" {
-		if err := Authenticate(this.Ctx); err != nil {
-			this.Redirect("/admin", http.StatusSeeOther)
+	if pc.Ctx.Request.URL.String() == "/admin/partners" {
+		if err := Authenticate(pc.Ctx); err != nil {
+			pc.Redirect("/admin", http.StatusSeeOther)
 		}
-		this.TplName = "admin/partners.tpl"
+		pc.TplName = "admin/partners.tpl"
 	}
 
 	err := page.Read("partners")
 	if err != nil {
-		this.Data["Error"] = err.Error()
+		pc.Data["Error"] = err.Error()
 		return
 	}
-	this.Data["Page"] = page
-	this.Data["HtmlBody"] = template.HTML(page.Body)
+	pc.Data["Page"] = page
+	pc.Data["HtmlBody"] = template.HTML(page.Body)
 }
 
-func (this *PartnersController) Post() {
-	this.TplName = "admin/partners.tpl"
-	this.Data["Title"] = "Our Partners"
+// Post request handler
+func (pc *PartnersController) Post() {
+	pc.TplName = "admin/partners.tpl"
+	pc.Data["Title"] = "Our Partners"
 
 	page := &contents.Page{
 		Slug:  "partners",
-		Title: this.Data["Title"].(string),
-		Body:  this.GetString("body"),
+		Title: pc.Data["Title"].(string),
+		Body:  pc.GetString("body"),
 	}
 
 	err := page.Write("partners")
 	if err != nil {
-		this.Data["Error"] = err.Error()
+		pc.Data["Error"] = err.Error()
 	}
-	this.Data["Page"] = page
+	pc.Data["Page"] = page
 }

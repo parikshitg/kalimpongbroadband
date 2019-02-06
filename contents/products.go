@@ -7,16 +7,19 @@ import (
 	"github.com/boltdb/bolt"
 )
 
+// ProductBucket name
 const ProductBucket = "products"
 
+// Product information
 type Product struct {
-	ID    uint64 `json:"id"`
-	Slug  string `json:"slug"`
-	Title string `json:"title"`
-	Body  string `json:"body"`
+	ID          uint64 `json:"id"`
+	Slug        string `json:"slug"`
+	Title       string `json:"title"`
+	Description string `json:"description"`
 }
 
-func (this *Product) Read(slug string) error {
+// Read contact information from DB
+func (product *Product) Read(slug string) error {
 	// Create a read-only transaction.
 	if err := db.View(func(tx *bolt.Tx) error {
 		b := tx.Bucket([]byte(ProductBucket))
@@ -31,7 +34,7 @@ func (this *Product) Read(slug string) error {
 		}
 
 		// Convert JSON to struct
-		err := json.Unmarshal(item, this)
+		err := json.Unmarshal(item, product)
 		return err
 	}); err != nil {
 		return err
@@ -39,7 +42,8 @@ func (this *Product) Read(slug string) error {
 	return nil
 }
 
-func (this *Product) Write(slug string) error {
+// Write contact information to DB
+func (product *Product) Write(slug string) error {
 	// Create a read-write transaction.
 	if err := db.Update(func(tx *bolt.Tx) error {
 		b := tx.Bucket([]byte(ProductBucket))
@@ -48,7 +52,7 @@ func (this *Product) Write(slug string) error {
 		}
 
 		// Convert to JSON
-		item, err := json.Marshal(this)
+		item, err := json.Marshal(product)
 		if err != nil {
 			return err
 		}

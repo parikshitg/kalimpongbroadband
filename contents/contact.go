@@ -7,8 +7,10 @@ import (
 	"github.com/boltdb/bolt"
 )
 
+// ContactBucket name
 const ContactBucket = "contacts"
 
+// Contact infomation
 type Contact struct {
 	ID       uint64 `json:"id"`
 	Slug     string `json:"slug"`
@@ -24,7 +26,8 @@ type Contact struct {
 	Email    string `json:"email"`
 }
 
-func (this *Contact) Read(slug string) error {
+// Read contact information from DB
+func (contact *Contact) Read(slug string) error {
 	// Create a read-only transaction.
 	if err := db.View(func(tx *bolt.Tx) error {
 		b := tx.Bucket([]byte(ContactBucket))
@@ -39,7 +42,7 @@ func (this *Contact) Read(slug string) error {
 		}
 
 		// Convert JSON to struct
-		err := json.Unmarshal(item, this)
+		err := json.Unmarshal(item, contact)
 		return err
 	}); err != nil {
 		return err
@@ -47,7 +50,8 @@ func (this *Contact) Read(slug string) error {
 	return nil
 }
 
-func (this *Contact) Write(slug string) error {
+// Write contact information to DB
+func (contact *Contact) Write(slug string) error {
 	// Create a read-write transaction.
 	if err := db.Update(func(tx *bolt.Tx) error {
 		b := tx.Bucket([]byte(ContactBucket))
@@ -56,7 +60,7 @@ func (this *Contact) Write(slug string) error {
 		}
 
 		// Convert to JSON
-		item, err := json.Marshal(this)
+		item, err := json.Marshal(contact)
 		if err != nil {
 			return err
 		}

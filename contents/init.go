@@ -34,4 +34,5 @@ func init() {
 	}
 }
 
+// ErrorContentNotFound on the database
 var ErrorContentNotFound = errors.New("Content not found")

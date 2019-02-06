@@ -4,11 +4,13 @@ import (
 	"github.com/urantiatech/beego"
 )
 
+// HomeController definition
 type HomeController struct {
 	beego.Controller
 }
 
-func (c *HomeController) Get() {
-	c.TplName = "page/home.tpl"
+// Get request handler
+func (hc *HomeController) Get() {
+	hc.TplName = "page/home.tpl"
 
 }

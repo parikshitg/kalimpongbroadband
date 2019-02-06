@@ -7,50 +7,54 @@ import (
 	"github.com/urantiatech/beego/context"
 )
 
+// AdminController definition
 type AdminController struct {
 	beego.Controller
 }
 
 const authToken = "some-random-string"
 
-func (this *AdminController) Get() {
-	if err := Authenticate(this.Ctx); err != nil {
-		this.TplName = "admin/login.tpl"
-		this.Data["Title"] = "Admin Login"
-		this.Data["Error"] = err.Error()
+// Get request handler
+func (ac *AdminController) Get() {
+	if err := Authenticate(ac.Ctx); err != nil {
+		ac.TplName = "admin/login.tpl"
+		ac.Data["Title"] = "Admin Login"
+		ac.Data["Error"] = err.Error()
 		return
 	}
 
-	this.TplName = "admin/dashboard.tpl"
-	this.Data["Title"] = "Dashboard"
+	ac.TplName = "admin/dashboard.tpl"
+	ac.Data["Title"] = "Dashboard"
 }
 
-func (this *AdminController) Post() {
-	username := this.GetString("username")
-	password := this.GetString("password")
+// Post request handler
+func (ac *AdminController) Post() {
+	username := ac.GetString("username")
+	password := ac.GetString("password")
 
 	if username != beego.AppConfig.String("adminuser") ||
 		password != beego.AppConfig.String("adminpass") {
-		this.TplName = "admin/login.tpl"
-		this.Data["Title"] = "Admin Login"
-		this.Data["Error"] = "Invalid username or password"
+		ac.TplName = "admin/login.tpl"
+		ac.Data["Title"] = "Admin Login"
+		ac.Data["Error"] = "Invalid username or password"
 		return
 	}
 
-	this.TplName = "admin/dashboard.tpl"
-	this.Data["Title"] = "Dashboard"
+	ac.TplName = "admin/dashboard.tpl"
+	ac.Data["Title"] = "Dashboard"
 
 	// Set Auth Cookie
 	signkey := beego.AppConfig.String("signkey")
-	this.SetSecureCookie(signkey, "AuthCookie", authToken)
+	ac.SetSecureCookie(signkey, "AuthCookie", authToken)
 }
 
+// Authenticate looks for AuthCookie
 func Authenticate(c *context.Context) error {
 	// Check Auth Cookie
 	signkey := beego.AppConfig.String("signkey")
 	val, found := c.GetSecureCookie(signkey, "AuthCookie")
 	if !found || val != authToken {
-		return errors.New("Please login to continue.")
+		return errors.New("Please login to continue")
 	}
 	return nil
 }

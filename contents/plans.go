@@ -7,19 +7,22 @@ import (
 	"github.com/boltdb/bolt"
 )
 
+// PlanBucket name
 const PlanBucket = "plans"
 
+// Plan details
 type Plan struct {
 	ID            uint64 `json:"id"`
 	Slug          string `json:"slug"`
-	Title         string `json:"title"`
+	Name          string `json:"name"`
 	Provider      string `json:"provider"`
 	Speed         string `json:"speed"`
 	MonthlyRental int    `json:"monthly"`
 	AnualRental   int    `json:"annual"`
 }
 
-func (this *Plan) Read(slug string) error {
+// Read contact information from DB
+func (plan *Plan) Read(slug string) error {
 	// Create a read-only transaction.
 	if err := db.View(func(tx *bolt.Tx) error {
 		b := tx.Bucket([]byte(PlanBucket))
@@ -34,7 +37,7 @@ func (this *Plan) Read(slug string) error {
 		}
 
 		// Convert JSON to struct
-		err := json.Unmarshal(item, this)
+		err := json.Unmarshal(item, plan)
 		return err
 	}); err != nil {
 		return err
@@ -42,7 +45,8 @@ func (this *Plan) Read(slug string) error {
 	return nil
 }
 
-func (this *Plan) Write(slug string) error {
+// Write contact information to DB
+func (plan *Plan) Write(slug string) error {
 	// Create a read-write transaction.
 	if err := db.Update(func(tx *bolt.Tx) error {
 		b := tx.Bucket([]byte(PlanBucket))
@@ -51,7 +55,7 @@ func (this *Plan) Write(slug string) error {
 		}
 
 		// Convert to JSON
-		item, err := json.Marshal(this)
+		item, err := json.Marshal(plan)
 		if err != nil {
 			return err
 		}

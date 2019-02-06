@@ -8,44 +8,47 @@ import (
 	"github.com/urantiatech/beego"
 )
 
+// AboutController definition
 type AboutController struct {
 	beego.Controller
 }
 
-func (this *AboutController) Get() {
+// Get request handler
+func (ac *AboutController) Get() {
 	var page = &contents.Page{}
-	this.TplName = "page/about.tpl"
-	this.Data["Title"] = "About Us"
+	ac.TplName = "page/about.tpl"
+	ac.Data["Title"] = "About Us"
 
-	if this.Ctx.Request.URL.String() == "/admin/about" {
-		if err := Authenticate(this.Ctx); err != nil {
-			this.Redirect("/admin", http.StatusSeeOther)
+	if ac.Ctx.Request.URL.String() == "/admin/about" {
+		if err := Authenticate(ac.Ctx); err != nil {
+			ac.Redirect("/admin", http.StatusSeeOther)
 		}
-		this.TplName = "admin/about.tpl"
+		ac.TplName = "admin/about.tpl"
 	}
 
 	err := page.Read("about")
 	if err != nil {
-		this.Data["Error"] = err.Error()
+		ac.Data["Error"] = err.Error()
 		return
 	}
-	this.Data["Page"] = page
-	this.Data["HtmlBody"] = template.HTML(page.Body)
+	ac.Data["Page"] = page
+	ac.Data["HtmlBody"] = template.HTML(page.Body)
 }
 
-func (this *AboutController) Post() {
-	this.TplName = "admin/about.tpl"
-	this.Data["Title"] = "About Us"
+// Post request handler
+func (ac *AboutController) Post() {
+	ac.TplName = "admin/about.tpl"
+	ac.Data["Title"] = "About Us"
 
 	page := &contents.Page{
 		Slug:  "about",
-		Title: this.Data["Title"].(string),
-		Body:  this.GetString("body"),
+		Title: ac.Data["Title"].(string),
+		Body:  ac.GetString("body"),
 	}
 
-	err := page.Write("about")
+	err := page.Write(page.Slug)
 	if err != nil {
-		this.Data["Error"] = err.Error()
+		ac.Data["Error"] = err.Error()
 	}
-	this.Data["Page"] = page
+	ac.Data["Page"] = page
 }

@@ -6,15 +6,17 @@ import (
 	"github.com/urantiatech/beego"
 )
 
+// LogoutController definition
 type LogoutController struct {
 	beego.Controller
 }
 
-func (this *LogoutController) Get() {
+// Get request handler
+func (lc *LogoutController) Get() {
 	// Set Empty Auth Cookie
 	signkey := beego.AppConfig.String("signkey")
-	this.SetSecureCookie(signkey, "AuthCookie", "")
+	lc.SetSecureCookie(signkey, "AuthCookie", "")
 
 	// Redirect to login page
-	this.Redirect("/admin", http.StatusSeeOther)
+	lc.Redirect("/admin", http.StatusSeeOther)
 }

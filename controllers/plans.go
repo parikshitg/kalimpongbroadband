@@ -8,44 +8,47 @@ import (
 	"github.com/urantiatech/beego"
 )
 
+// PlansController definition
 type PlansController struct {
 	beego.Controller
 }
 
-func (this *PlansController) Get() {
+// Get request handler
+func (pc *PlansController) Get() {
 	var page = &contents.Page{}
-	this.TplName = "page/plans.tpl"
-	this.Data["Title"] = "Broadband Plans"
+	pc.TplName = "page/plans.tpl"
+	pc.Data["Title"] = "Broadband Plans"
 
-	if this.Ctx.Request.URL.String() == "/admin/plans" {
-		if err := Authenticate(this.Ctx); err != nil {
-			this.Redirect("/admin", http.StatusSeeOther)
+	if pc.Ctx.Request.URL.String() == "/admin/plans" {
+		if err := Authenticate(pc.Ctx); err != nil {
+			pc.Redirect("/admin", http.StatusSeeOther)
 		}
-		this.TplName = "admin/plans.tpl"
+		pc.TplName = "admin/plans.tpl"
 	}
 
 	err := page.Read("plans")
 	if err != nil {
-		this.Data["Error"] = err.Error()
+		pc.Data["Error"] = err.Error()
 		return
 	}
-	this.Data["Page"] = page
-	this.Data["HtmlBody"] = template.HTML(page.Body)
+	pc.Data["Page"] = page
+	pc.Data["HtmlBody"] = template.HTML(page.Body)
 }
 
-func (this *PlansController) Post() {
-	this.TplName = "admin/plans.tpl"
-	this.Data["Title"] = "Broadband Plans"
+// Post request handler
+func (pc *PlansController) Post() {
+	pc.TplName = "admin/plans.tpl"
+	pc.Data["Title"] = "Broadband Plans"
 
 	page := &contents.Page{
 		Slug:  "plans",
-		Title: this.Data["Title"].(string),
-		Body:  this.GetString("body"),
+		Title: pc.Data["Title"].(string),
+		Body:  pc.GetString("body"),
 	}
 
 	err := page.Write("plans")
 	if err != nil {
-		this.Data["Error"] = err.Error()
+		pc.Data["Error"] = err.Error()
 	}
-	this.Data["Page"] = page
+	pc.Data["Page"] = page
 }
