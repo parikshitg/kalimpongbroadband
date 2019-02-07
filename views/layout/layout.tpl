@@ -11,7 +11,7 @@
   	<title>Kalimpong Broadband</title>
 
 </head>
-<body>
+<body id="sp">
 	{{ template "partial/menubar.tpl" }}
 	{{ template "partial/header.tpl" }}
 	{{ block "contents" . }} {{ end }}
