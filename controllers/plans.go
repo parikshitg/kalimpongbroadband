@@ -1,10 +1,10 @@
 package controllers
 
 import (
-	"html/template"
 	"net/http"
 
 	"git.urantiatech.com/commercial/kalimpongbroadband/contents"
+	"git.urantiatech.com/pkg/slug"
 	"github.com/urantiatech/beego"
 )
 
@@ -15,7 +15,7 @@ type PlansController struct {
 
 // Get request handler
 func (pc *PlansController) Get() {
-	var page = &contents.Page{}
+	var plan = &contents.Plan{}
 	pc.TplName = "page/plans.tpl"
 	pc.Data["Title"] = "Broadband Plans"
 
@@ -26,29 +26,43 @@ func (pc *PlansController) Get() {
 		pc.TplName = "admin/plans.tpl"
 	}
 
-	err := page.Read("plans")
-	if err != nil {
-		pc.Data["Error"] = err.Error()
-		return
-	}
-	pc.Data["Page"] = page
-	pc.Data["HtmlBody"] = template.HTML(page.Body)
+	pc.Data["Plans"] = plan.ReadAll()
 }
 
 // Post request handler
 func (pc *PlansController) Post() {
+	var plan *contents.Plan
 	pc.TplName = "admin/plans.tpl"
 	pc.Data["Title"] = "Broadband Plans"
 
-	page := &contents.Page{
-		Slug:  "plans",
-		Title: pc.Data["Title"].(string),
-		Body:  pc.GetString("body"),
+	plan = &contents.Plan{
+		Slug:          pc.GetString("slug"),
+		Name:          pc.GetString("name"),
+		Provider:      pc.GetString("provider"),
+		Speed:         pc.GetString("speed"),
+		MonthlyRental: pc.GetString("monthly"),
+		AnnualRental:  pc.GetString("annual"),
+	}
+	if plan.Slug == "" {
+		plan.Slug = slug.StringToSlug(pc.GetString("name"))
 	}
 
-	err := page.Write("plans")
-	if err != nil {
+	if plan.IsEmpty() {
+		switch pc.GetString("op") {
+		case "update":
+			if err := plan.Delete(); err != nil {
+				pc.Data["Error"] = err.Error()
+			}
+		case "create":
+			// Do Nothing
+		}
+		pc.Data["Plans"] = plan.ReadAll()
+		return
+	}
+
+	if err := plan.Write(); err != nil {
 		pc.Data["Error"] = err.Error()
 	}
-	pc.Data["Page"] = page
+
+	pc.Data["Plans"] = plan.ReadAll()
 }

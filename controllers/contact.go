@@ -41,6 +41,7 @@ func (cc *ContactController) Post() {
 	contact := &contents.Contact{
 		Slug:     "contact",
 		Name:     cc.GetString("name"),
+		Email:    cc.GetString("email"),
 		Phone1:   cc.GetString("phone1"),
 		Phone2:   cc.GetString("phone2"),
 		Phone3:   cc.GetString("phone3"),
@@ -49,7 +50,7 @@ func (cc *ContactController) Post() {
 		Address2: cc.GetString("address2"),
 		City:     cc.GetString("city"),
 		State:    cc.GetString("state"),
-		Email:    cc.GetString("email"),
+		Pincode:  cc.GetString("pincode"),
 	}
 
 	err := contact.Write(contact.Slug)

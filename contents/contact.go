@@ -15,6 +15,7 @@ type Contact struct {
 	ID       uint64 `json:"id"`
 	Slug     string `json:"slug"`
 	Name     string `json:"name"`
+	Email    string `json:"email"`
 	Phone1   string `json:"phone1"`
 	Phone2   string `json:"phone2"`
 	Phone3   string `json:"phone3"`
@@ -23,7 +24,7 @@ type Contact struct {
 	Address2 string `json:"address2"`
 	City     string `json:"city"`
 	State    string `json:"state"`
-	Email    string `json:"email"`
+	Pincode  string `json:"pincode"`
 }
 
 // Read contact information from DB
