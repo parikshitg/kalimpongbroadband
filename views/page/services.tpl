@@ -7,60 +7,84 @@
 		{{ .HtmlBody }}
 	{{ end }} -->
 
-
+<!-- Start Content Wrapper -->
 <div class="content_wrapper">
 	<div class="PageTitle">
-		<h1>Services</h1>
+		<h1>Our Services</h1>
 	</div>
 	<div id="breadcrumbs">
-		<a href="/home" title="Home">Home</a> &raquo; <a href="/about" title="About Us">About Us</a> &raquo; Services
+		<a href="/" title="Home">Home</a> &raquo; Services
 	</div>
 	<!-- Content Area -->
 	<div id="content">
-		<div class="columns">
-			<div class="column">
-				<h2 class="icon web">Works Everywhere</h2>
-				<p>Donec accumsan malesuada orcidonec sitmet<br>eros lorem isum dolor amet incon. Adipiscing elit maurise pharetra magna accumsan. Malesuada orcdonec umet lorem doloronsec.</p>
-			</div>
-			<div class="column">
-				<h2 class="icon graph">Easy to Customize</h2>
-				<p>Donec accumsan malesuada orcidonec sitmet<br>eros lorem isum dolor amet incon. Adipiscing elit maurise pharetra magna accumsan. Malesuada orcdonec umet lorem doloronsec.</p>
-			</div>
-			<div class="column">
-				<h2 class="icon book">Full Documentation</h2>
-				<p>Donec accumsan malesuada orcidonec sitmet<br>eros lorem isum dolor amet incon. Adipiscing elit maurise pharetra magna accumsan. Malesuada orcdonec umet lorem doloronsec.</p>
-			</div>
-			<div class="clear"></div>
-		</div>
-		<div class="hr"></div>
-		<div class="columns3">
-			<div class="column">
-				<h2>Services List</h2>
-				<ul class="unordered type18">
-					<li>Praesent nulla lectus</li>
-					<li>Facilisis quis aliquet non</li>
-					<li>Tempus aliquam tortor cras sit</li>
-					<li>Amet libero non tellus placerat</li>
-					<li>Praesent nulla lectus</li>
-					<li>Facilisis quis aliquet non</li>
-					<li>Tempus aliquam tortor cras sit</li>
-					<li>Amet libero non tellus placerat</li>
-					<li>Praesent nulla lectus</li>
-				</ul>
-			</div>
-			<div class="column" data-place="2">
-				<h2>Libero nec dapibus placerat orci orci ultricies felis</h2>
-				<a href="#"><img src="images/content/services_01.jpg" width="192" height="224" class="pic alignleft" alt="" /></a>
-				<p>Suspendisse diam urna, vestibulum nec tempor sit amet, ullamcorper a ante. Suspendisse bibendum leo sed sapien ultricies scelerisque. Suspendisse volutpat mattis gravida. Integer aliquam purus at diam sodales in consectetur urna dapibus. Maecenas pellentesque, dolor vel luctus porta, justo dolor pellentesque ligula, vel convallis dolor odio ut nunc.<p>
-				<p>Maecenas quam neque, sagittis ac feugiat at, eleifend sed augue. Sed pulvinar dignissim viverra. Quisque condimentum, dui at viverra lobortis, nibh nulla fermentum libero, sit amet vulputate elit elit sed purus. Quisque fermentum, mi sit amet molestie tincidunt, mi leo volutpat urna, et convallis mi ante quis magna. Sed eget est id erat porttitor pharetra. Proin posuere turpis at mi facilisis convallis.</p>
-				<p>Nam sed felis et ligula fringilla tincidunt in id nisi. Duis elementum sem non nulla hendrerit bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet feugiat ligula, et vestibulum arcu accumsan id. Suspendisse est velit, tristique eu ultricies vel, dictum vel orci. Integer placerat tempor orci lobortis condimentum.</p>
-				<div class="clear"></div>
-			</div>
+		<div class="portfolio_three_col">
+			<ul>
+				<li>
+					<div class="portfolio_thumb">
+						<a data-rel="prettyPhoto[gallery]"><img src="/images/cctv.jpg" width="277" height="154" alt="" class="pic" /><span class="hover_vid"></span></a>
+					</div>
+					<div class="portfolio_det">
+						<h2><a href="portfolio_single.html">CCTV & Camera</a></h2>
+						<p>We also supply CCTv camera. CP Plus and Hikvision CCtv cameras are available. Installation of CCtv are also done by us. General charges or installtion are ₹2500 for 8 cameras and ₹1500 for 4 cameras. </p>
+						<div class="clear"></div>
+					</div>
+				</li>
+				<li>
+					<div class="portfolio_thumb">
+						<a data-rel="prettyPhoto[gallery]"><img src="/images/desktop.jpg" width="277" height="154" alt="" class="pic" /><span class="hover_vid"></span></a>
+					</div>
+					<div class="portfolio_det">
+						<h2><a href="portfolio_single.html">Computer Accesories</a></h2>
+						<p>We also supply all kinds of computer accesories. Monitor,keyboard,mouse,CPU,pendrive,hardisks,SSD,Web cam,etc. of latest and popular brands are available .</p>
+						<div class="clear"></div>
+					</div>
+				</li>
+				<li>
+					<div class="portfolio_thumb">
+						<a data-rel="prettyPhoto[gallery]"><img src="/images/homewiring.jpg" width="277" height="154" alt="" class="pic" /><span class="hover_vid"></span></a>
+					</div>
+					<div class="portfolio_det">
+						<h2><a href="portfolio_single.html">Electrical items & Home wiring</a></h2>
+						<p>All types of electrical items like switches, bulb,LED lights,boards, all types of wires are available. We also do home wiring .</p>
+						<div class="clear"></div>
+					</div>
+				</li>
+				<li>
+					<div class="portfolio_thumb">
+						<a data-rel="prettyPhoto[gallery]"><img src="/images/inverter.jpg" width="277" height="154" alt="" class="pic" /><span class="hover_img"></span></a>
+					</div>
+					<div class="portfolio_det">
+						<h2><a href="portfolio_single.html">Inverter & Installation</a></h2>
+						<p>We also provide interverter and battries. Microtek and Luminous Inverter are available. Installation of inverter and wiring is also done for free.</p>
+						<div class="clear"></div>
+					</div>
+				</li>
+				<li>
+					<div class="portfolio_thumb">
+						<a data-rel="prettyPhoto[gallery]"><img src="/images/mitv.jpg" width="277" height="154" alt="" class="pic" /><span class="hover_img"></span></a>
+					</div>
+					<div class="portfolio_det">
+						<h2><a href="portfolio_single.html">Television</a></h2>
+						<p>We also supply all kinds of Televisions LCD,LED of all screen sizes and latest brands. Brands like Mi,Intex,Panorama etc are available.</p>
+						<div class="clear"></div>
+					</div>
+				</li>
+				<li>
+					<div class="portfolio_thumb">
+						<a data-rel="prettyPhoto[gallery]"><img src="/images/geyser.jpg" width="277" height="154" alt="" class="pic" /><span class="hover_img"></span></a>
+					</div>
+					<div class="portfolio_det">
+						<h2><a href="portfolio_single.html">Geyser</a></h2>
+						<p>Gyser of different capacities are available. Cost depends as per seasons and free installtion.</p>
+						<div class="clear"></div>
+					</div>
+				</li>
+			</ul>
 			<div class="clear"></div>
 		</div>
 	</div>
 </div>
-
+<!-- End Content Wrapper -->
 
 
 {{ end }}

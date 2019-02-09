@@ -18,7 +18,7 @@
 		</div>
 		<!-- Content Area -->
 		<div id="content">
-			<p><img src="images/about_pic.png" width="620" height="425" alt="" /></p>
+			<p><img src="images/base.jpg" width="620" height="425" alt="" /></p>
 			<h2>Who We Are</h2>
 			<p>Donec accumsan malesuada orcidonec sitmet eros lorem isum dolor amet incon. Adipiscing elit maurise pharetra magna accumsan. Malesuada orcdonec umet lorem doloronsec malesuada. Udipiscing elit mauris sifermentum. Tellus dolor, dapibus eget, elementum. Unean auctor wisi et urna. Aliquam erat volutpat.  Quisque vitae sem in massa viverra laoreet vitae at lectus. Phasellus sem est, posuere at sollicitudin a, eleifend vel mauris. Praesent quis erat eget ipsum vulputate volutpat. Nulla facilisi. Cras gravida elit nec libero accumsan mattis. Maecenas ut sem eu nulla euismod tincidunt in vitae diam. Sed lectus dui, varius nec laoreet ac, cursus vel quam. In tempus velit ut massa lobortis a facilisis neque dapibus.</p>
 			<p>Quisque enim nulla, suscipit eu porttitor et, bibendum vitae sapien. Nulla a tellus lectus, facilisis porta nunc. Pellentesque ante lacus, congue non lobortis in, vehicula sit amet nisi. Donec accumsan malesuada orcidonec sitmet eros lorem isum dolor amet incon. Adipiscing elit maurise pharetra magna accumsan. 
@@ -82,7 +82,7 @@
 					<li>Electrical items & Home wiring </li>
 					<li>Inverter & installation</li>
 					<li>Television</li>
-					<li>Gyser</li>
+					<li>Geyser</li>
 				</ul>
 			</div>
 			<!-- End Tabbed Box Container -->
