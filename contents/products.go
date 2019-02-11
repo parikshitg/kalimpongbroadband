@@ -16,6 +16,7 @@ type Product struct {
 	Slug        string `json:"slug"`
 	Name        string `json:"name"`
 	Description string `json:"description"`
+	Image       string `json:"image"`
 }
 
 // Read contact information from DB

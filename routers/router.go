@@ -20,6 +20,7 @@ func init() {
 	beego.SetStaticPath("/js", "static/js")
 	beego.SetStaticPath("/img", "static/img")
 	beego.SetStaticPath("/fonts", "static/fonts")
+	beego.SetStaticPath("/uploads", "uploads")
 
 	if beego.AppConfig.String("adminuser") != "" &&
 		beego.AppConfig.String("adminpass") != "" {
@@ -28,6 +29,7 @@ func init() {
 		beego.Router("/admin/about", &controllers.AboutController{})
 		beego.Router("/admin/services", &controllers.ServicesController{})
 		beego.Router("/admin/plans", &controllers.PlansController{})
+		beego.Router("/admin/product", &controllers.ProductController{})
 		beego.Router("/admin/products", &controllers.ProductsController{})
 		beego.Router("/admin/partners", &controllers.PartnersController{})
 		beego.Router("/admin/contact", &controllers.ContactController{})
