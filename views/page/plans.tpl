@@ -31,14 +31,16 @@
             </tr>
         </thead>
         <tbody>
+          {{ range $p:= .Plans }}
           <tr height="75px">
-            <td><center>Alliance</center></td>
-            <td><center>BROWSE+</center></td>
-            <td><center>12 Mbps</center></td>
-            <td><center>₹800/month</center></td>
-            <td><center>₹9600/year</center></td>
+            <td><center>{{ $p.Name }}</center></td>
+            <td><center>{{ $p.Provider }}</center></td>
+            <td><center>{{ $p.Speed }}</center></td>
+            <td><center>₹{{ $p.MonthlyRental }}/month</center></td>
+            <td><center>₹{{ $p.AnnualRental }}/year <br>+<br> 1 (free month)</center></td>
           </tr>
-          <tr class="odd" height="75px">
+          {{ end }}
+          <!--<tr class="odd" height="75px">
             <td><center>Alliance</center></td>
             <td><center>QUICK+</center></td>
             <td><center>30 Mbps</center></td>
@@ -86,7 +88,7 @@
             <td><center>12 Mbps</center></td>
             <td><center>₹1200/month</center></td>
             <td><center>₹1200/year</center></td>
-          </tr>
+          </tr>-->
         </tbody>
       </table>
 
@@ -121,7 +123,7 @@
         </div>
         <div class="column" data-place="2">
           <h3>Ubiquitous Wireless Coonection</h3>
-          <table class="table">
+          <table class="table" >
             <thead>
               <tr>
                 <th>Device</th>

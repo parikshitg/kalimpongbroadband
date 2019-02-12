@@ -1,51 +1,68 @@
 package controllers
 
 import (
-	"html/template"
 	"net/http"
 
 	"git.urantiatech.com/commercial/kalimpongbroadband/contents"
+	"git.urantiatech.com/pkg/slug"
 	"github.com/urantiatech/beego"
 )
 
+// PlansController definition
 type PlansController struct {
 	beego.Controller
 }
 
-func (this *PlansController) Get() {
-	var page = &contents.Page{}
-	this.TplName = "page/plans.tpl"
-	this.Data["Title"] = "Broadband Plans"
+// Get request handler
+func (pc *PlansController) Get() {
+	var plan = &contents.Plan{}
+	pc.TplName = "page/plans.tpl"
+	pc.Data["Title"] = "Broadband Plans"
 
-	if this.Ctx.Request.URL.String() == "/admin/plans" {
-		if err := Authenticate(this.Ctx); err != nil {
-			this.Redirect("/admin", http.StatusSeeOther)
+	if pc.Ctx.Request.URL.String() == "/admin/plans" {
+		if err := Authenticate(pc.Ctx); err != nil {
+			pc.Redirect("/admin", http.StatusSeeOther)
 		}
-		this.TplName = "admin/plans.tpl"
+		pc.TplName = "admin/plans.tpl"
 	}
 
-	err := page.Read("plans")
-	if err != nil {
-		this.Data["Error"] = err.Error()
-		return
-	}
-	this.Data["Page"] = page
-	this.Data["HtmlBody"] = template.HTML(page.Body)
+	pc.Data["Plans"] = plan.ReadAll()
 }
 
-func (this *PlansController) Post() {
-	this.TplName = "admin/plans.tpl"
-	this.Data["Title"] = "Broadband Plans"
+// Post request handler
+func (pc *PlansController) Post() {
+	var plan *contents.Plan
+	pc.TplName = "admin/plans.tpl"
+	pc.Data["Title"] = "Broadband Plans"
 
-	page := &contents.Page{
-		Slug:  "plans",
-		Title: this.Data["Title"].(string),
-		Body:  this.GetString("body"),
+	plan = &contents.Plan{
+		Slug:          pc.GetString("slug"),
+		Name:          pc.GetString("name"),
+		Provider:      pc.GetString("provider"),
+		Speed:         pc.GetString("speed"),
+		MonthlyRental: pc.GetString("monthly"),
+		AnnualRental:  pc.GetString("annual"),
+	}
+	if plan.Slug == "" {
+		plan.Slug = slug.StringToSlug(pc.GetString("name"))
 	}
 
-	err := page.Write("plans")
-	if err != nil {
-		this.Data["Error"] = err.Error()
+	if plan.IsEmpty() {
+		switch pc.GetString("op") {
+		case "update":
+			if err := plan.Delete(); err != nil {
+				pc.Data["Error"] = err.Error()
+			}
+		case "create":
+			// Do Nothing
+		}
+		pc.Data["Plans"] = plan.ReadAll()
+		return
 	}
-	this.Data["Page"] = page
+
+	if err := plan.Write(); err != nil {
+		pc.Data["Error"] = err.Error()
+	}
+
+	pc.Data["Plans"] = plan.ReadAll()
 }
