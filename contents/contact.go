@@ -7,12 +7,15 @@ import (
 	"github.com/boltdb/bolt"
 )
 
+// ContactBucket name
 const ContactBucket = "contacts"
 
+// Contact infomation
 type Contact struct {
 	ID       uint64 `json:"id"`
 	Slug     string `json:"slug"`
 	Name     string `json:"name"`
+	Email    string `json:"email"`
 	Phone1   string `json:"phone1"`
 	Phone2   string `json:"phone2"`
 	Phone3   string `json:"phone3"`
@@ -21,10 +24,11 @@ type Contact struct {
 	Address2 string `json:"address2"`
 	City     string `json:"city"`
 	State    string `json:"state"`
-	Email    string `json:"email"`
+	Pincode  string `json:"pincode"`
 }
 
-func (this *Contact) Read(slug string) error {
+// Read contact information from DB
+func (contact *Contact) Read(slug string) error {
 	// Create a read-only transaction.
 	if err := db.View(func(tx *bolt.Tx) error {
 		b := tx.Bucket([]byte(ContactBucket))
@@ -39,7 +43,7 @@ func (this *Contact) Read(slug string) error {
 		}
 
 		// Convert JSON to struct
-		err := json.Unmarshal(item, this)
+		err := json.Unmarshal(item, contact)
 		return err
 	}); err != nil {
 		return err
@@ -47,7 +51,8 @@ func (this *Contact) Read(slug string) error {
 	return nil
 }
 
-func (this *Contact) Write(slug string) error {
+// Write contact information to DB
+func (contact *Contact) Write(slug string) error {
 	// Create a read-write transaction.
 	if err := db.Update(func(tx *bolt.Tx) error {
 		b := tx.Bucket([]byte(ContactBucket))
@@ -56,7 +61,7 @@ func (this *Contact) Write(slug string) error {
 		}
 
 		// Convert to JSON
-		item, err := json.Marshal(this)
+		item, err := json.Marshal(contact)
 		if err != nil {
 			return err
 		}

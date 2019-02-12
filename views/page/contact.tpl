@@ -1,7 +1,6 @@
 {{ template "layout/layout.tpl" . }}
 
 {{ define "contents" }}
-
 	
 <!-- Start Content Wrapper -->
 <div class="content_wrapper">
@@ -33,35 +32,55 @@
 						<input name="phone" type="text" id="phone" size="50" value="" /></p>
 						<p><label for="subject" accesskey="S">Subject</label>
 						<select name="subject" id="subject">
-						  <option value="Support">Support</option>
-						  <option value="a Sale">Sales</option>
-						  <option value="a Bug fix">Report a bug</option>
+						  <option value="Support">Get Connection</option>
+						  <option value="a Sale">Recharge</option>
+						  <option value="a Bug fix">Connectivity Issues</option>
 						</select></p>
 						<p><label for="comments" accesskey="C"><span class="required">*</span> Your comments</label>
 						<textarea name="comments"  rows="8" cols="40"  id="comments" style="width: 450px;"></textarea></p>
-						<p><span class="required">*</span> Are you human?</p>
-						<div style="padding-bottom:1.5em;">
-							<label style="float:left; margin-right:15px;" for="verify" accesskey="V"><img src="image.php" alt="" /></label>
-							<span style="display:block; width:70px; position:relative; float:left;"><input name="verify" type="text" id="verify" size="5" style="width: 50px;" /></span>
-							<div class="clear"></div>
-						</div>
 						<p><input type="submit" class="submit" id="submit" value="Submit" /></p>
 					</fieldset>
 					</form>
 				</div>
 			</div>
-			<div class="column">
-				<h2>Location</h2>
-				<div src="/images/parikshitg.jpg" style="width:260px; height:300px;"></div>
+			<!--<div class="column">
+				<h2>CEO, Rajesh Jain</h2>
+				<div src="images/ubiquity.jpg" style="width:260px; height:300px;"></div>
 				<br />
 				<h2>Head Office</h2>
+				{{ with .Contact }}
 				<address>
-					<strong>Address:</strong> 12 Street, Los Angeles, CA, 94101<br />
-					<strong>Phone:</strong>   +1 800 123 4567<br />
-					<strong>FAX:</strong> +1 800 891 2345<br />
-					<strong>Email:</strong> testmail@sitename.com
+					<strong>Name:</strong> {{ .Name }} <br />
+					<strong>Email:</strong> {{ .Email }} <br/>
+					<strong>Phone:</strong>   {{ .Phone1 }}, {{ .Phone2 }}<br />
+					<strong>Whatsapp:</strong> {{ .WhatsApp }} <br/>
+					<strong>Address:</strong> {{ .Address1 }}, {{ .Address2 }}, {{ .City }}, {{ .State }}, {{ .Pincode }}
 				</address>
+				{{ end }}
+			</div>-->
+			<div class="column">
+			<div class="widget-container widget_recent_projects">
+				<!--<h3>Recent Projects</h3>-->
+				<ul>
+					<li>
+						<img src="images/parikshitg.jpg" width="260" height="300" alt="" class="pic" />
+						<h2>CEO, Rajesh Jain</h2>
+						{{ with .Contact }}
+						<address>
+							<strong>Name:</strong> {{ .Name }} <br />
+							<strong>Email:</strong> {{ .Email }} <br/>
+							<strong>Phone:</strong>   {{ .Phone1 }}, {{ .Phone2 }}<br />
+							<strong>Whatsapp:</strong> {{ .WhatsApp }} <br/>
+							<strong>Address:</strong> {{ .Address1 }}, {{ .Address2 }}, {{ .City }}, {{ .State }}, {{ .Pincode }}
+						</address>
+						{{ end }}
+					</li>
+				</ul>
+				<div class="clear"></div>
 			</div>
+			</div>
+
+
 			<div class="clear"></div>
 		</div>
 	<div class="clear"></div>
