@@ -21,7 +21,7 @@
 			<ul>
 				<li>
 					<div class="portfolio_thumb">
-						<a data-rel="prettyPhoto[gallery]"><img src="/images/cctv.jpg" width="277" height="154" alt="" class="pic" /><span class="hover_vid"></span></a>
+						<a data-rel="prettyPhoto[gallery]"><img src="/images/cctv.jpg" width="277" height="165" alt="" class="pic" /><span class="hover_vid"></span></a>
 					</div>
 					<div class="portfolio_det">
 						<h2><a href="portfolio_single.html">CCTV & Camera</a></h2>
@@ -31,7 +31,7 @@
 				</li>
 				<li>
 					<div class="portfolio_thumb">
-						<a data-rel="prettyPhoto[gallery]"><img src="/images/desktop.jpg" width="277" height="154" alt="" class="pic" /><span class="hover_vid"></span></a>
+						<a data-rel="prettyPhoto[gallery]"><img src="/images/desktop.jpg" width="277" height="165" alt="" class="pic" /><span class="hover_vid"></span></a>
 					</div>
 					<div class="portfolio_det">
 						<h2><a href="portfolio_single.html">Computer Accesories</a></h2>
@@ -41,7 +41,7 @@
 				</li>
 				<li>
 					<div class="portfolio_thumb">
-						<a data-rel="prettyPhoto[gallery]"><img src="/images/homewiring.jpg" width="277" height="154" alt="" class="pic" /><span class="hover_vid"></span></a>
+						<a data-rel="prettyPhoto[gallery]"><img src="/images/homewiring.jpg" width="277" height="165" alt="" class="pic" /><span class="hover_vid"></span></a>
 					</div>
 					<div class="portfolio_det">
 						<h2><a href="portfolio_single.html">Electrical items & Home wiring</a></h2>
@@ -51,7 +51,7 @@
 				</li>
 				<li>
 					<div class="portfolio_thumb">
-						<a data-rel="prettyPhoto[gallery]"><img src="/images/inverter.jpg" width="277" height="154" alt="" class="pic" /><span class="hover_img"></span></a>
+						<a data-rel="prettyPhoto[gallery]"><img src="/images/inverter.jpg" width="277" height="165" alt="" class="pic" /><span class="hover_img"></span></a>
 					</div>
 					<div class="portfolio_det">
 						<h2><a href="portfolio_single.html">Inverter & Installation</a></h2>
@@ -61,7 +61,7 @@
 				</li>
 				<li>
 					<div class="portfolio_thumb">
-						<a data-rel="prettyPhoto[gallery]"><img src="/images/mitv.jpg" width="277" height="154" alt="" class="pic" /><span class="hover_img"></span></a>
+						<a data-rel="prettyPhoto[gallery]"><img src="/images/mitv.jpg" width="277" height="165" alt="" class="pic" /><span class="hover_img"></span></a>
 					</div>
 					<div class="portfolio_det">
 						<h2><a href="portfolio_single.html">Television</a></h2>
@@ -71,7 +71,7 @@
 				</li>
 				<li>
 					<div class="portfolio_thumb">
-						<a data-rel="prettyPhoto[gallery]"><img src="/images/geyser.jpg" width="277" height="154" alt="" class="pic" /><span class="hover_img"></span></a>
+						<a data-rel="prettyPhoto[gallery]"><img src="/images/geyser.jpg" width="277" height="165" alt="" class="pic" /><span class="hover_img"></span></a>
 					</div>
 					<div class="portfolio_det">
 						<h2><a href="portfolio_single.html">Geyser</a></h2>

@@ -23,14 +23,21 @@
       <table class="table" width="500px">
         <thead>
             <tr>
-            <th width="100px"><center>Service Provider</center></th>
             <th width="100px"><center>Plan Name</center></th>
+            <th width="100px"><center>Service Provider</center></th>
             <th width="100px"><center>Speed</center></th>
             <th width="100px"><center>Price/Month</center></th>
             <th width="100px"><center>Annual Rental</center></th>
             </tr>
         </thead>
         <tbody>
+          <tr height="75px">
+            <td><center>BROWSE+</center></td>
+            <td><center>Alliance</center></td>
+            <td><center> 12Mbps</center></td>
+            <td><center>₹800/month</center></td>
+            <td><center>₹9600/year </center></td>
+          </tr>
           {{ range $p:= .Plans }}
           <tr height="75px">
             <td><center>{{ $p.Name }}</center></td>
@@ -74,21 +81,21 @@
             <td><center> Mbps</center></td>
             <td><center>₹/month</center></td>
             <td><center>₹/year <br>+<br> 1 (free month)</center></td>
-          </tr>
+          </tr>-->
           <tr height="75px">
-            <td><center>Galaxy</center></td>
             <td><center>SPEED+</center></td>
+            <td><center>Galaxy</center></td>
             <td><center>4 Mbps</center></td>
             <td><center>₹₹800/month</center></td>
             <td><center>₹9600/year </center></td>
           </tr>
           <tr class="odd" height="75px">
-            <td><center>Galaxy</center></td>
             <td><center>FAST+</center></td>
+            <td><center>Galaxy</center></td>
             <td><center>12 Mbps</center></td>
             <td><center>₹1200/month</center></td>
             <td><center>₹1200/year</center></td>
-          </tr>-->
+          </tr>
         </tbody>
       </table>
 
@@ -122,7 +129,7 @@
           </div>
         </div>
         <div class="column" data-place="2">
-          <h3>Ubiquitous Wireless Coonection</h3>
+          <h3>Ubiquitous Wireless Connection</h3>
           <table class="table" >
             <thead>
               <tr>

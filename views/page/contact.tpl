@@ -15,8 +15,8 @@
 	<div id="content">
 		<div class="columns">
 			<div class="column" data-place="2">
-				<h2>Contact Info</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus semper laoreet accumsan. Sed eget elit nunc, ut eleifend urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc mollis dolor ac quam blandit quis egestas diam pharetra. Aliquam ligula felis, ornare et consectetur eu, dictum sit amet mauris. Aliquam id purus odio, sed vehicula libero.</p>
+				<h2>Geeting in Touch is Easy</h2>
+				<p>Email us with any questions or enquiries.We would be happy to answer your questions.</p>
 				<div class="hr_610"></div>
 				<h2>Send Us Mail</h2>
 				<!-- Start Contact Form -->
