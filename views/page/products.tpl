@@ -26,7 +26,6 @@
 						<div class="portfolio_det">
 							<h2><a href="portfolio_single.html">Phasellus suscipit</a></h2>
 							<p>Malesuada orcidonec sitmet eros lorem isum dolor amet incon...</p>
-							<a href="portfolio_single.html" class="btn alignleft" title="read more">read more</a>
 							<div class="clear"></div>
 						</div>
 					</li>
@@ -37,7 +36,6 @@
 						<div class="portfolio_det">
 							<h2><a href="portfolio_single.html">Proin iaculis viverra</a></h2>
 							<p>Malesuada orcidonec sitmet eros lorem isum dolor amet incon...</p>
-							<a href="portfolio_single.html" class="btn alignleft" title="read more">read more</a>
 							<div class="clear"></div>
 						</div>
 					</li>
@@ -48,7 +46,6 @@
 						<div class="portfolio_det">
 							<h2><a href="portfolio_single.html">Ut non dolor</a></h2>
 							<p>Malesuada orcidonec sitmet eros lorem isum dolor amet incon...</p>
-							<a href="portfolio_single.html" class="btn alignleft" title="read more">read more</a>
 							<div class="clear"></div>
 						</div>
 					</li>
@@ -59,7 +56,6 @@
 						<div class="portfolio_det">
 							<h2><a href="portfolio_single.html">Cras scelerisque</a></h2>
 							<p>Malesuada orcidonec sitmet eros lorem isum dolor amet incon...</p>
-							<a href="portfolio_single.html" class="btn alignleft" title="read more">read more</a>
 							<div class="clear"></div>
 						</div>
 					</li>
@@ -70,7 +66,6 @@
 						<div class="portfolio_det">
 							<h2><a href="portfolio_single.html">Fusce odio mi</a></h2>
 							<p>Malesuada orcidonec sitmet eros lorem isum dolor amet incon...</p>
-							<a href="portfolio_single.html" class="btn alignleft" title="read more">read more</a>
 							<div class="clear"></div>
 						</div>
 					</li>
@@ -81,7 +76,6 @@
 						<div class="portfolio_det">
 							<h2><a href="portfolio_single.html">Aenean fermentum</a></h2>
 							<p>Malesuada orcidonec sitmet eros lorem isum dolor amet incon...</p>
-							<a href="portfolio_single.html" class="btn alignleft" title="read more">read more</a>
 							<div class="clear"></div>
 						</div>
 					</li>
@@ -92,7 +86,6 @@
 						<div class="portfolio_det">
 							<h2><a href="portfolio_single.html">Vestibulum libero</a></h2>
 							<p>Malesuada orcidonec sitmet eros lorem isum dolor amet incon...</p>
-							<a href="portfolio_single.html" class="btn alignleft" title="read more">read more</a>
 							<div class="clear"></div>
 						</div>
 					</li>
@@ -103,7 +96,6 @@
 						<div class="portfolio_det">
 							<h2><a href="portfolio_single.html">Sed urna sapien</a></h2>
 							<p>Malesuada orcidonec sitmet eros lorem isum dolor amet incon...</p>
-							<a href="portfolio_single.html" class="btn alignleft" title="read more">read more</a>
 							<div class="clear"></div>
 						</div>
 					</li>

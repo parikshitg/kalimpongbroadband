@@ -133,41 +133,59 @@
 	<div id="content">
 		<div class="columns">
 			<blockquote>
-				<p>Unean auctor wisi eturna. Aliquam erat volutpat. Duis turpis. Integer rutrum ante acus consect etuer. Adipiscing elit. Maurisfetun Duis ultricies pharetra magna.</p>
+				<center><p style="font-size: 32px; color: blue;">Go Fast! Get KalimpongBroadband.</p></center>
 			</blockquote>
-			<div class="column">
+			<br><br>
+			<br>
+
+			<div class="columns">
+				<div class="column">
+					<center><img src="/images/wifi.png" /></center>
+					<center><h2>Get always connected.</h2></center>
+				</div>
+				<div class="column">
+					<center><img src="/images/speed.png" /></center>
+					<center><h2>Lightening fast speeds.</h2></center>
+				</div>
+				<div class="clear"></div>
+			</div>
+
+			<!--<center>
+				<div class="post">
+					<div class="post_thumb"><img src="images/content/blog_01.jpg" alt="" width="602" height="224" border="0" class="pic" /></div>
+					<div class="clear"></div>
+				</div>
+			</center>-->
+
+			<!--<div class="column">
 				<h2 class="icon web">Works Everywhere</h2>
 				<p>Donec accumsan malesuada orcidonec sitmet<br>eros lorem isum dolor amet incon. Adipiscing elit maurise pharetra magna accumsan. Malesuada orcdonec umet lorem doloronsec.</p>
-				<a href="#" title="read more" class="btn alignleft">read more</a>
 				<div class="clear"></div>
 			</div>
 			<div class="column">
 				<h2 class="icon graph">Easy to Customize</h2>
 				<p>Donec accumsan malesuada orcidonec sitmet<br>eros lorem isum dolor amet incon. Adipiscing elit maurise pharetra magna accumsan. Malesuada orcdonec umet lorem doloronsec.</p>
-				<a href="#" title="read more" class="btn alignleft">read more</a>
 				<div class="clear"></div>
 			</div>
 			<div class="column">
 				<h2 class="icon book">Full Documentation</h2>
 				<p>Donec accumsan malesuada orcidonec sitmet<br>eros lorem isum dolor amet incon. Adipiscing elit maurise pharetra magna accumsan. Malesuada orcdonec umet lorem doloronsec.</p>
-				<a href="#" title="read more" class="btn alignleft">read more</a>
 				<div class="clear"></div>
-			</div>
-			<div class="clear"></div>
+			</div>-->
 		</div>
 		<div class="hr"></div>
 		<div class="columns2">
 			<div class="column">
-				<h2>Unlimited Possibilities</h2>
-				<img src="/images/variety.jpg" />
+				<!--<h2>Unlimited Possibilities</h2>-->
+				<img src="/images/variety.png" />
 			</div>
 			<div class="column">
-				<h2>Clean and Beautiful</h2>
-				<img src="/images/500.jpg" />
+				<!--<h2>Clean and Beautiful</h2>-->
+				<img src="/images/500.png" />
 			</div>
 			<div class="column">
-				<h2>Professional Services</h2>
-				<img src="/images/range.jpg" />
+				<!--<h2>Professional Services</h2>-->
+				<img src="/images/range.png" />
 			</div>
 			<div class="clear"></div>
 		</div>

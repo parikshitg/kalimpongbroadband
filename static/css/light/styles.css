@@ -57,7 +57,7 @@ Author URI: http://themeforest.net/user/MixerTheme
 
 /* ========== RESET/GLOBAL ========== */
 
-html, body, address, blockquote, div, dl, form, h1, h2, h3, h4, h5, h6, pre,
+html, body, address, blockquote, div, dl, form, h1, h2, h3, h4, h5, h6, h7,h8, pre,
 dd, dl, dt, a, cite, code, img, tt, legend, fieldset, label {margin: 0; padding: 0; text-align:left;}
 
 img, a img, form, fieldset {border: 0;}
@@ -177,6 +177,17 @@ h5, h6			{
 				color:#232323;
 				line-height:1.286em;
 				margin-bottom:1.286em;
+				}
+h7 				{
+				font:bold 14px Arial, Helvetica, sans-serif;
+				color:#f9f9f9;
+				line-height:1.286em;
+				margin-bottom:1.286em;
+				}
+h8				{
+				font:bold 16px Arial, Helvetica, sans-serif;
+				color:#f9f9f9;
+				
 				}
 				
 ul, ol			{
