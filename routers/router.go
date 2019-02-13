@@ -28,6 +28,7 @@ func init() {
 		beego.Router("/admin/about", &controllers.AboutController{})
 		beego.Router("/admin/services", &controllers.ServicesController{})
 		beego.Router("/admin/plans", &controllers.PlansController{})
+		beego.Router("/admin/product", &controllers.ProductController{})
 		beego.Router("/admin/products", &controllers.ProductsController{})
 		beego.Router("/admin/partners", &controllers.PartnersController{})
 		beego.Router("/admin/contact", &controllers.ContactController{})
