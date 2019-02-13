@@ -138,7 +138,7 @@ $.include('js/jquery.easing.1.3.js');
 
 	// jQuery Accordion
 	if (jQuery("#accordion").length) {
-		$.include('sliders/accordion-slider/jquery.elegantAccordion.js');
+		$.include('/css/accordion-slider/jquery.elegantAccordion.js');
 		jQuery(document).ready(function(){
 			jQuery('#accordion').eAccordion ({
 				easing: 'swing',                // Anything other than "linear" or "swing" requires the easing plugin
