@@ -19,7 +19,7 @@
     <!-- Content Area -->
     <div id="content">
       <h2>Wifi Broadband Plans</h2><br>
-      <blockquote><p>Many plans to choose form ...</p></blockquote><br>
+      <blockquote><p style="font-size: 32px; color: #088A08;">Many plans to choose form ...</p></blockquote><br><br>
       <table class="table" width="500px">
         <thead>
             <tr>

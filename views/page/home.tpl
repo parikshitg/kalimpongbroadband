@@ -18,14 +18,14 @@
 		<a href="index.html" class="logo"><img src="images/logo.png" width="180" height="50" alt="" /></a>
 		<div id="menu">
 			<ul class="ddsmoothmenu">
-				<li class="current-menu-item"><span class="menuslide"></span><a href="/" title="Home">Home<span class="menu_description">Beginning</span></a>
+				<li class="current-menu-item"><span class="menuslide"></span><a href="/" title="Home">Home<span class="menu_description">Welcome</span></a>
                 </li>
 				<li><span class="menuslide"></span><a href="/about" title="About">About<span class="menu_description">About Us</span></a>
                 </li>
-				<li><span class="menuslide"></span><a href="/plans" title="Plans">Plans<span class="menu_description">WiFi Plans</span></a></li>
-				<li><span class="menuslide"></span><a href="/services" title="Services">Services<span class="menu_description">Our Services</span></a>
+				<li><span class="menuslide"></span><a href="/plans" title="Plans">Plans<span class="menu_description">Broadband Plans</span></a></li>
+				<li><span class="menuslide"></span><a href="/services" title="Services">Services<span class="menu_description">Other Services</span></a>
 				</li>
-				<li><span class="menuslide"></span><a href="/products" title="Products">Products<span class="menu_description">On Any Page</span></a>
+				<li><span class="menuslide"></span><a href="/products" title="Products">Products<span class="menu_description">List Of Products</span></a>
 				</li>
 				<li><span class="menuslide"></span><a href="/partners" title="Partners">Partners<span class="menu_description">Our Partners</span></a></li>
 				<li><span class="menuslide"></span><a href="/contact" title="Contact">Contact<span class="menu_description">Write a Message</span></a></li>
@@ -226,9 +226,12 @@
 <div class="footer_full">
 	<div id="footer">
 		<div class="copy">
-			<p>Copyright &copy; 2015  &bull;  MixerTheme  &bull;  All rights reserved</p>
-			<p class="developed_by">Developed By: <a href="http://cssmixer.com/">CSSMixer</a></p>
+			<h7>Copyright &copy; 2019  &bull;  KalimpongBroadband  &bull;  All rights reserved</h7><br>
+			<h8 class="developed_by">Designed & Hosted By: <a href="www.urantiatech.com">UrantiaTech</a></h8>
 		</div>
+		<div class="social">
+			<img src="images/callnow.png" width="42" height="42" alt="callnow" />   CALL NOW : 9002587876
+		</div> 
 		<div class="clear"></div>
 	</div>
 </div>
