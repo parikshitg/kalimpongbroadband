@@ -19,7 +19,7 @@
 	<!-- Content Area -->
 	<div id="content">
 		<div class="post">
-			<div class="post_thumb_alternate"><a href="https://urantiatech.com"><img src="images/urantiatech.png" width="340" height="110" alt="" class="pic" /></a></div>
+			<div class="post_thumb_alternate"><a href="https://urantiatech.com" target="_blank"><img src="/images/urantiatech.png" width="340" height="110" alt="" class="pic" /></a></div>
 			<div class="post_descr_alternate">
 				<h2><a href="blog_single.html">UrantiaTech</a></h2>
 				<div class="excerpt">
@@ -30,7 +30,7 @@
 			<div class="clear"></div>
 		</div>
 		<div class="post">
-			<div class="post_thumb_alternate"><a href="blog_single.html"><img src="images/alliance.png" width="340" height="110" alt="" class="pic" /></a></div>
+			<div class="post_thumb_alternate"><a href=""><img src="/images/alliance.png" width="340" height="110" alt="" class="pic" /></a></div>
 			<div class="post_descr_alternate">
 				<h2><a href="blog_single.html">Alliance Broadband</a></h2>
 				<div class="excerpt">
@@ -41,7 +41,7 @@
 			<div class="clear"></div>
 		</div>
 		<div class="post">
-			<div class="post_thumb_alternate"><a href="blog_single.html"><img src="images/galaxy.png" width="340" height="110" alt="" class="pic" /></a></div>
+			<div class="post_thumb_alternate"><a href=""><img src="/images/galaxy.png" width="340" height="110" alt="" class="pic" /></a></div>
 			<div class="post_descr_alternate">
 				<h2><a href="blog_single.html">Galaxy Broadband</a></h2>
 				<div class="excerpt">
