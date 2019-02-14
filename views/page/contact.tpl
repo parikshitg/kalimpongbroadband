@@ -15,7 +15,7 @@
 		<div class="columns">
 			<div class="column" data-place="2">
 				<h2>Geeting in Touch is Easy</h2>
-				<p>Email us with any questions or enquiries.We would be happy to answer your questions.</p>
+				<p>Customer satisfaction is our number one priority.<br> Email us with any questions or enquiries. We would be happy to answer your questions.<br> Contact us today and see what we can do for you.</p>
 				<div class="hr_610"></div>
 				<h2>Send Us Mail</h2>
 				<!-- Start Contact Form -->

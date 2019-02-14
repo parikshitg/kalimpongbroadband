@@ -3,7 +3,7 @@
 	<div id="footer">
 		<div class="copy">
 			<h7>Copyright &copy; 2019  &bull;  KalimpongBroadband  &bull;  All rights reserved</h7><br>
-			<h8 class="developed_by">Designed & Hosted By: <a href="www.urantiatech.com">UrantiaTech</a></h8>
+			<h8 class="developed_by">Designed & Hosted By: <a href="https://urantiatech.com">UrantiaTech</a></h8>
 		</div>
 		<div class="social">
 			<img src="images/callnow.png" width="42" height="42" alt="callnow" />   CALL NOW : 9002587876
