@@ -46,7 +46,7 @@
 			<div class="slideContainer">
 				<ul class="accordion" id="accordion">
 					<li class="bg1">
-						<a href="#" title="How We Do It">How We Do It</a>
+						<a href="#" title="Kalimpong">Kalimpong</a>
 						<h2>How We Do It</h2>
 						<div>
 							<h2>How We Do It</h2>
@@ -59,7 +59,7 @@
 						</div>
 					</li>
 					<li class="bg2">
-						<a href="#" title="Easy to Customize">Easy to Customize</a>
+						<a href="#" title="Kurseong">Kurseong</a>
 						<h2>Easy to Customize</h2>
 						<div>
 							<h2>Easy to Customize</h2>
@@ -70,7 +70,7 @@
 						</div>
 					</li>
 					<li class="bg3">
-						<a href="#" title="Clean Design">Clean Design</a>
+						<a href="#" title="Bijanbari">Bijanbari</a>
 						<h2>Clean Design</h2>
 						<div>
 							<h2>Clean Design</h2>
@@ -135,19 +135,19 @@
 			<div class="column">
 				<img src="/images/time.png" >
 				<h2>Minimum Downtime</h2>
-				<p class="dropcap-type2">Donec accumsan malesuada orcidonec sitmet<br>eros lorem isum dolor amet incon. Adipiscing elit maurise pharetra magna accumsan. Malesuada orcdonec umet lorem doloronsec.</p>
+				<p class="dropcap-type3">M Dedicated service team that do best utilization of resources to minimize downtime.</p>
 				<div class="clear"></div>
 			</div>
 			<div class="column">
 				<img src="/images/range.png" >
-				<h2>Minimum Downtime</h2>
-				<p class="dropcap-type2">Donec accumsan malesuada orcidonec sitmet<br>eros lorem isum dolor amet incon. Adipiscing elit maurise pharetra magna accumsan. Malesuada orcdonec umet lorem doloronsec.</p>				
+				<h2>Wide Range Of Plans</h2>
+				<p class="dropcap-type2">P Wide range of plans with different speeds to choose according to you need.</p>
 				<div class="clear"></div>
 			</div>
 			<div class="column">
 				<img src="/images/rupee.png" >
-				<h2>Minimum Downtime</h2>
-				<p class="dropcap-type2">Donec accumsan malesuada orcidonec sitmet<br>eros lorem isum dolor amet incon. Adipiscing elit maurise pharetra magna accumsan. Malesuada orcdonec umet lorem doloronsec.</p>
+				<h2>Affordable Prices</h2>
+				<p class="dropcap-type3">A Cheap affordable monthly prices with unlimited downloading and uploading.</p>
 				<div class="clear"></div>
 			</div>
 			<div class="clear"></div>
@@ -156,20 +156,20 @@
 		<div class="columns2">
 			<div class="column">
 				<img src="/images/setting.png" >
-				<h2>Minimum Downtime</h2>
-				<p class="dropcap-type1">A Nulla eget erat eget nibh accumsan rutrum eget sit amet arcu. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincint tristique mi, vitae vulputate elit aliquet at praesent in.</p>
+				<h2>Quickest Installation</h2>
+				<p class="dropcap-type2">Q Easy, convinient, one day installation.</p>
 				<div class="clear"></div>
 			</div>
 			<div class="column">
 				<img src="/images/download.png" >
-				<h2>Minimum Downtime</h2>
-				<p class="dropcap-type2">B Nulla eget erat eget nibh accumsan rutrum eget sit amet arcu. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincint tristique mi, vitae vulputate elit aliquet at praesent in.</p>
+				<h2>Rapid Download</h2>
+				<p class="dropcap-type3">D Superfast downloading speeds , now download digital media without any interruption.</p>
 				<div class="clear"></div>
 			</div>
 			<div class="column">
 				<img src="/images/variety.png" >
-				<h2>Minimum Downtime</h2>
-				<p class="dropcap-type3">C Nulla eget erat eget nibh accumsan rutrum eget sit amet arcu. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincint tristique mi, vitae vulputate elit aliquet at praesent in.</p>
+				<h2>Variety Of Services</h2>
+				<p class="dropcap-type2">V We also provide other services like computer accesories, home wiring, cctv camera and installtion, inverter and batteries, etc. </p>
 				<div class="clear"></div>
 			</div>
 			<div class="clear"></div>
@@ -246,7 +246,7 @@
 	<div id="footer">
 		<div class="copy">
 			<h7>Copyright &copy; 2019  &bull;  KalimpongBroadband  &bull;  All rights reserved</h7><br>
-			<h8 class="developed_by">Designed & Hosted By: <a href="www.urantiatech.com">UrantiaTech</a></h8>
+			<h8 class="developed_by">Designed & Hosted By: <a href="https://urantiatech.com" target="_blank">UrantiaTech</a></h8>
 		</div>
 		<div class="social">
 			<img src="images/callnow.png" width="42" height="42" alt="callnow" />   CALL NOW : 9002587876
