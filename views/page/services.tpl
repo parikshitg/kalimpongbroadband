@@ -1,5 +1,7 @@
 {{ template "layout/layout.tpl" . }}
 
+{{ define "title" }} Services {{ end }}
+
 {{ define "contents" }}
 	<!--{{ if .Error }}{{ .Error}}{{ end }}
 	{{ if .Page }}

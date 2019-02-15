@@ -1,5 +1,7 @@
 {{ template "layout/layout.tpl" . }}
 
+{{ define "title" }} Partners {{ end }}
+
 {{ define "contents" }}
 	<!--{{ if .Error }}{{ .Error}}{{ end }}
 	{{ if .Page }}

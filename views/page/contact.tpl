@@ -1,5 +1,7 @@
 {{ template "layout/layout.tpl" . }}
 
+{{ define "title" }} Contact {{ end }}
+
 {{ define "contents" }}
 	
 <!-- Start Content Wrapper -->

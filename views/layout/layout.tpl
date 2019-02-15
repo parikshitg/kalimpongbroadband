@@ -8,7 +8,7 @@
 		@import url(css/light/styles.css);		/*link to the main CSS file */
 	</style>
   	
-  	<title>Kalimpong Broadband</title>
+  	<title>Kalimpong Broadband | {{ block "title" . }} {{ end }}</title>
 
 </head>
 <body id="sp">

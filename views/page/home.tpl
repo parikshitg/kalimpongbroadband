@@ -47,9 +47,9 @@
 				<ul class="accordion" id="accordion">
 					<li class="bg1">
 						<a href="#" title="Kalimpong">Kalimpong</a>
-						<h2>How We Do It</h2>
+						<h2>Kalimpong</h2>
 						<div>
-							<h2>How We Do It</h2>
+							<h2>Kalimpong</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
 								sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 								Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
@@ -60,9 +60,9 @@
 					</li>
 					<li class="bg2">
 						<a href="#" title="Kurseong">Kurseong</a>
-						<h2>Easy to Customize</h2>
+						<h2>Kurseong</h2>
 						<div>
-							<h2>Easy to Customize</h2>
+							<h2>Kurseong</h2>
 							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
 								accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
 								quae ab illo inventore veritatis et quasi architecto beatae vitae
@@ -71,9 +71,9 @@
 					</li>
 					<li class="bg3">
 						<a href="#" title="Bijanbari">Bijanbari</a>
-						<h2>Clean Design</h2>
+						<h2>Bijanbari</h2>
 						<div>
-							<h2>Clean Design</h2>
+							<h2>Bijanbari</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
 								sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 								Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
@@ -96,7 +96,7 @@
 						</div>
 					</li>
 					<li class="bg5">
-						<a href="#" title="Web Development">Web Development</a>
+						<a href="https://urantiatech.com" title="Web Development" target="_blank">Web Development</a>
 						<h2>Web Development</h2>
 						<div>
 							<h2>Web Development</h2>

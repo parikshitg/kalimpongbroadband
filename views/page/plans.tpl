@@ -1,5 +1,8 @@
 {{ template "layout/layout.tpl" . }}
 
+
+{{ define "title" }} Plans {{ end }}
+
 {{ define "contents" }}
 	<!--{{ if .Error }}{{ .Error}}{{ end }}
 	{{ if .Page }}
