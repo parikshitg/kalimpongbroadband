@@ -16,7 +16,7 @@
 		<h1>Our Partners</h1>
 	</div>
 	<div id="breadcrumbs">
-		<a href="index.html" title="Home">Home</a> &raquo; Partners
+		<a href="/" title="Home">Home</a> &raquo; Partners
 	</div>
 	<!-- Content Area -->
 	<div id="content">

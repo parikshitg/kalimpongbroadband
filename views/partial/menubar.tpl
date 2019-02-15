@@ -18,9 +18,6 @@
 				<li {{ if activeURI .URI "/products" }}class="current-menu-item"{{ end }}>
 					<span class="menuslide"></span><a href="/products" title="Products">Products<span class="menu_description">Our Products</span></a>
 				</li>
-				<li {{ if activeURI .URI "/partners" }}class="current-menu-item"{{ end }}>
-					<span class="menuslide"></span><a href="/partners" title="Partners">Partners<span class="menu_description">Our Partners</span></a>
-				</li>
 				<li {{ if activeURI .URI "/contact" }}class="current-menu-item"{{ end }}>
 					<span class="menuslide"></span><a href="/contact" title="Contact">Contact<span class="menu_description">Contact Us</span></a>
 				</li>

@@ -15,7 +15,7 @@
 			<h1>Products </h1>
 		</div>
 		<div id="breadcrumbs">
-			<a href="index.html" title="Home">Home</a> &raquo; Products
+			<a href="/" title="Home">Home</a> &raquo; Products
 		</div>
 		<!-- Content Area -->
 		<div id="content">

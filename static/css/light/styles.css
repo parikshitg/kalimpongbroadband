@@ -74,7 +74,7 @@ body:before		{
 				}
 
 body			{
-				font-size:12px;
+				font-size:16px;
 				font-family:Arial, Helvetica, sans-serif;
 				line-height:1.5em;
 				color:#666666;
@@ -2098,7 +2098,7 @@ ul.unordered.type26 li	{background-image:url(/images/16x16/star_full.png);}
 				border-collapse:collapse;
 				margin-bottom:20px;
 				border-bottom:1px solid #d9d9d9;
-				background:#8c8b8b;
+				background:#853200;
 				}
 				
 .table thead	{
@@ -2114,7 +2114,7 @@ ul.unordered.type26 li	{background-image:url(/images/16x16/star_full.png);}
 				
 .table th		{
 				color:#fff;
-				background:#000;
+				background:#454546;
 				border:1px solid #4d4d4d;
 				border-bottom:none;
 				font-weight:bold;
@@ -2135,11 +2135,11 @@ ul.unordered.type26 li	{background-image:url(/images/16x16/star_full.png);}
 .table th.txtcenter,
 .table th.txtcenter{text-align:center;}
 
-.table tr:nth-child(even){background:#f0f0f0;}
+.table tr:nth-child(even){background:#c45702;}
 .table tr.odd td{
-				*background:#f0f0f0;		/* ---- CSS Hack for IE7 ---- */
-				background:#f0f0f0\0/;		/* ---- CSS Hack for IE8 ---- */
-				color:#232323;
+				*background:#f2c19e;		/* ---- CSS Hack for IE7 ---- */
+				background:#f2c19e\0/;		/* ---- CSS Hack for IE8 ---- */
+				color:#f0f0f0;
 				}
 .table tr:nth-child(-n+1) td{border-top:1px solid #D6D6D7;}
 .table tr td	{
@@ -2149,7 +2149,7 @@ ul.unordered.type26 li	{background-image:url(/images/16x16/star_full.png);}
 				
 .table td		{
 				border-left:1px solid #D6D6D7;
-				color:#232323;
+				color:#f0f0f0;
 				}
 
 .table tr > td:last-of-type		{border-right:1px solid #D6D6D7;}

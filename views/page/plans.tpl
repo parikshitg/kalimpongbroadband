@@ -21,8 +21,9 @@
     </div>
     <!-- Content Area -->
     <div id="content">
+
       <h2>Wifi Broadband Plans</h2><br>
-      <blockquote><p style="font-size: 32px; color: #088A08;">Many plans to choose form ...</p></blockquote><br><br>
+
       <table class="table" width="500px">
         <thead>
             <tr>
@@ -160,6 +161,79 @@
         </div>
         <div class="clear"></div>
       </div>
+
+
+    <div class="portfolio_three_col">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <ul>
+        <li>
+          <div class="portfolio_thumb">
+            <a href="http://www.youtube.com/watch?v=GgR6dyzkKHI" data-rel="prettyPhoto[gallery]"><img src="gallery/thumb/folio_3_01.jpg" width="277" height="154" alt="" class="pic" /><span class="hover_vid"></span></a>
+          </div>
+          <div class="portfolio_det">
+            <h2><a href="portfolio_single.html">Wireless Router</a></h2>
+          </div>
+        </li>
+        <li>
+          <div class="portfolio_thumb">
+            <a href="http://vimeo.com/7449107" data-rel="prettyPhoto[gallery]"><img src="gallery/thumb/folio_3_02.jpg" width="277" height="154" alt="" class="pic" /><span class="hover_vid"></span></a>
+          </div>
+          <div class="portfolio_det">
+            <h2><a href="portfolio_single.html">Internet Cable</a></h2>
+          </div>
+        </li>
+        <li>
+          <div class="portfolio_thumb">
+            <a href="http://www.youtube.com/watch?v=1iIZeIy7TqM?width=640&height=360" data-rel="prettyPhoto[gallery]"><img src="gallery/thumb/folio_3_03.jpg" width="277" height="154" alt="" class="pic" /><span class="hover_vid"></span></a>
+          </div>
+          <div class="portfolio_det">
+            <h2><a href="portfolio_single.html">1 Month Rental</a></h2>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+
+
+    <div class="portfolio_three_col">
+      <ul>
+        <li>
+          <div class="portfolio_thumb">
+            <a href="http://www.youtube.com/watch?v=GgR6dyzkKHI" data-rel="prettyPhoto[gallery]"><img src="gallery/thumb/folio_3_01.jpg" width="277" height="154" alt="" class="pic" /><span class="hover_vid"></span></a>
+          </div>
+          <div class="portfolio_det">
+            <h2><a href="portfolio_single.html">Light Beam</a></h2>
+            <p>Installation Charges: Rs 6000</p>
+            <div class="clear"></div>
+          </div>
+        </li>
+        <li>
+          <div class="portfolio_thumb">
+            <a href="http://vimeo.com/7449107" data-rel="prettyPhoto[gallery]"><img src="gallery/thumb/folio_3_02.jpg" width="277" height="154" alt="" class="pic" /><span class="hover_vid"></span></a>
+          </div>
+          <div class="portfolio_det">
+            <h2><a href="portfolio_single.html">AirGate</a></h2>
+            <p>Installation Charges: Rs 6000</p>
+            <div class="clear"></div>
+          </div>
+        </li>
+        <li>
+          <div class="portfolio_thumb">
+            <a href="http://www.youtube.com/watch?v=1iIZeIy7TqM?width=640&height=360" data-rel="prettyPhoto[gallery]"><img src="gallery/thumb/folio_3_03.jpg" width="277" height="154" alt="" class="pic" /><span class="hover_vid"></span></a>
+          </div>
+          <div class="portfolio_det">
+            <h2><a href="portfolio_single.html">Ubiquity PowerBeam</a></h2>
+            <p>Installation Charges: Rs 9000</p>
+            <div class="clear"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
 
     </div>
   </div>
