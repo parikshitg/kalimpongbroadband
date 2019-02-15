@@ -9,13 +9,13 @@
 		@import url(/css/accordion-slider/accordion-slider.css);	/*link to the CSS file for accordion-slider */
 	</style>
 
-	<title>Inspiration | Home page</title>
+	<title>Kalimpong Broadband | Home page</title>
 </head>
 <body id="main">
 <!-- Start Main Nav -->
 <div class="mainnav_full">
 	<div id="MainNav">
-		<a href="index.html" class="logo"><img src="images/logo.png" width="180" height="50" alt="" /></a>
+		<a href="index.html" class="logo"><img src="images/inspiration.png" width="180" height="50" alt="" /></a>
 		<div id="menu">
 			<ul class="ddsmoothmenu">
 				<li class="current-menu-item"><span class="menuslide"></span><a href="/" title="Home">Home<span class="menu_description">Welcome</span></a>
@@ -131,6 +131,12 @@
 <div class="content_wrapper">
 	<!-- Content Area -->
 	<div id="content">
+		<div class="columns">
+			<blockquote>
+				<center><p style="font-size: 32px; color: blue;">Go Fast! Get KalimpongBroadband.</p></center>
+			</blockquote>
+		</div>
+		<br><br>
 		<div class="columns">
 			<div class="column">
 				<img src="/images/time.png" >

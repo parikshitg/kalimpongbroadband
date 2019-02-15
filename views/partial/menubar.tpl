@@ -1,6 +1,6 @@
 <div class="mainnav_full">
 	<div id="MainNav">
-		<a href="index.html" class="logo"><img src="images/logo.png" width="180" height="50" alt="" /></a>
+		<a href="index.html" class="logo"><img src="images/inspiration.png" width="180" height="50" alt="" /></a>
 		<div id="menu">
 			<ul class="ddsmoothmenu">
 				<li><span class="menuslide"></span><a href="/" title="Home">Home<span class="menu_description">Welcome</span></a></li>
