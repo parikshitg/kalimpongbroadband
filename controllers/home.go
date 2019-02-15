@@ -12,5 +12,5 @@ type HomeController struct {
 // Get request handler
 func (hc *HomeController) Get() {
 	hc.TplName = "page/home.tpl"
-
+	hc.Data["URI"] = "/"
 }

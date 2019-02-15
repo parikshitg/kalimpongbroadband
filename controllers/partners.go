@@ -17,6 +17,7 @@ type PartnersController struct {
 func (pc *PartnersController) Get() {
 	var page = &contents.Page{}
 	pc.TplName = "page/partners.tpl"
+	pc.Data["URI"] = "/partners"
 	pc.Data["Title"] = "Our Partners"
 
 	if pc.Ctx.Request.URL.String() == "/admin/partners" {

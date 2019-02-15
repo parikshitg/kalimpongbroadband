@@ -19,6 +19,7 @@ type ProductController struct {
 func (pc *ProductController) Get() {
 	var product = contents.Product{}
 	pc.TplName = "page/product.tpl"
+	pc.Data["URI"] = "/products"
 
 	switch pc.GetString("op") {
 	case "edit":
