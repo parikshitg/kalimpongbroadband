@@ -1,16 +1,16 @@
+
 <!-- Start Footer  -->
 <div class="footer_full">
 	<div id="footer">
 		<div class="copy">
-			<h7>Copyright &copy; 2019  &bull;  KalimpongBroadband  &bull;  All rights reserved</h7><br>
-			<h8 class="developed_by">Designed & Hosted By: <a href="https://urantiatech.com" target="_blank">UrantiaTech</a></h8>
+			<p>Copyright &copy; 2019  &bull;  KalimpongBroadband.com  &bull;  All rights reserved</p>
+			<p style="padding-top: 6px;">Designed &amp; Developed By: <strong><a style="color:#0080ff;" 
+				href="http://www.urantiatech.com/">UrantiaTech</a></strong></p>
 		</div>
+
 		<div class="social">
-			<img src="images/callnow.png" width="42" height="42" alt="callnow" />   CALL NOW : 9002587876
-			<!--<a href="http://themeforest.net/user/MixerTheme/portfolio" title="Myspace"><img src="images/myspace.png" width="42" height="42" alt="" /></a>
-			<a href="feed://themeforest.net/feeds/users/MixerTheme" title="RSS Feed"><img src="images/rss.png" width="42" height="42" alt="" /></a>
-			<a href="http://twitter.com/MixerTheme" title="Twitter"><img src="images/twitter.png" width="42" height="42" alt="" /></a>-->
-		</div> 
+			<img src="/images/callnow.png" height="42px" width="auto" alt="+91 90025 87876" />
+		</div>
 		<div class="clear"></div>
 	</div>
 </div>

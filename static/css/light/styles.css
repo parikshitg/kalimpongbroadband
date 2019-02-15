@@ -378,7 +378,7 @@ a:hover.logo	{
 				width:100%;
 				position:relative;
 				z-index:10;
-				background-image:url(/images/patterns/pattern_01.jpg);
+				background-image:url(/images/patterns/pattern_10.jpg);
 				background-position: top center;
 				background-repeat:no-repeat;
 				}
@@ -574,9 +574,9 @@ a:hover.logo	{
 				padding:0;
 				}
 				
-#footer .developed_by {font-size:11px;}
+#footer .developed_by {font-size:14px;}
 				
-#footer .copy	{float:left;}
+#footer .copy	{float:left; font-size: 16px;}
 #footer .social	{float:right;}
 #footer .social a	{
 				width:42px;

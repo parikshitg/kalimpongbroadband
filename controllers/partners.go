@@ -15,6 +15,7 @@ type PartnersController struct {
 func (this *PartnersController) Get() {
 	var page = &contents.Page{}
 	this.TplName = "page/partners.tpl"
+	this.Data["URI"] = "/partners"
 	this.Data["Title"] = "Our Partners"
 
 	if this.Ctx.Request.URL.String() == "/admin/partners" {

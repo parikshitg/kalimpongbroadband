@@ -8,7 +8,7 @@ type HomeController struct {
 	beego.Controller
 }
 
-func (c *HomeController) Get() {
-	c.TplName = "page/home.tpl"
-
+func (hc *HomeController) Get() {
+	hc.TplName = "page/home.tpl"
+	hc.Data["URI"] = "/"
 }

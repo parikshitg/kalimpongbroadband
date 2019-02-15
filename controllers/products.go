@@ -16,6 +16,7 @@ type ProductsController struct {
 func (pc *ProductsController) Get() {
 	var product = contents.Product{}
 	pc.TplName = "page/products.tpl"
+	pc.Data["URI"] = "/products"
 	pc.Data["Title"] = "Our Products"
 
 	if pc.Ctx.Request.URL.String() == "/admin/products" {

@@ -17,6 +17,7 @@ type PlansController struct {
 func (pc *PlansController) Get() {
 	var plan = &contents.Plan{}
 	pc.TplName = "page/plans.tpl"
+	pc.Data["URI"] = "/plans"
 	pc.Data["Title"] = "Broadband Plans"
 
 	if pc.Ctx.Request.URL.String() == "/admin/plans" {

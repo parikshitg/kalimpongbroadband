@@ -15,6 +15,7 @@ type ServicesController struct {
 func (this *ServicesController) Get() {
 	var page = &contents.Page{}
 	this.TplName = "page/services.tpl"
+	this.Data["URI"] = "/services"
 	this.Data["Title"] = "Our Services"
 
 	if this.Ctx.Request.URL.String() == "/admin/services" {

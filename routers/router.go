@@ -20,6 +20,7 @@ func init() {
 	beego.SetStaticPath("/js", "static/js")
 	beego.SetStaticPath("/images", "static/images")
 	beego.SetStaticPath("/fonts", "static/fonts")
+	beego.SetStaticPath("/sliders", "static/sliders")
 
 	if beego.AppConfig.String("adminuser") != "" &&
 		beego.AppConfig.String("adminpass") != "" {

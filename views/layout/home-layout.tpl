@@ -5,15 +5,16 @@
 	<link rel="shortcut icon" href="img/favicon.ico" />
 
 	<style type="text/css">
-		@import url(css/light/styles.css);		/*link to the main CSS file */
+		@import url(css/light/styles.css);		
+		@import url(sliders/coin-slider/coin-slider.css);
 	</style>
   	
-  	<title>Kalimpong Broadband | {{ block "title" . }} {{ end }}</title>
+  	<title>Kalimpong Broadband</title>
 
 </head>
-<body id="sp">
+<body id="main">
 	{{ template "partial/menubar.tpl" . }}
-	{{ template "partial/header.tpl" . }}
+	{{ template "partial/header-full.tpl" . }}
 
 	{{ block "contents" . }} {{ end }}
 	

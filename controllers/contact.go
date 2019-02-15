@@ -16,6 +16,7 @@ type ContactController struct {
 func (cc *ContactController) Get() {
 	var contact = &contents.Contact{}
 	cc.TplName = "page/contact.tpl"
+	cc.Data["URI"] = "/contact"
 	cc.Data["Title"] = "Contact Us"
 
 	if cc.Ctx.Request.URL.String() == "/admin/contact" {

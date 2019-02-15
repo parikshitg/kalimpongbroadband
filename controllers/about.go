@@ -15,6 +15,7 @@ type AboutController struct {
 func (this *AboutController) Get() {
 	var page = &contents.Page{}
 	this.TplName = "page/about.tpl"
+	this.Data["URI"] = "/about"
 	this.Data["Title"] = "About Us"
 
 	if this.Ctx.Request.URL.String() == "/admin/about" {
