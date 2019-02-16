@@ -17,7 +17,7 @@ type ServicesController struct {
 func (sc *ServicesController) Get() {
 	var page = &contents.Page{}
 	sc.TplName = "page/services.tpl"
-	sc.Data["Title"] = "Our Services"
+	sc.Data["URI"] = "/services"
 	sc.Data["Title"] = "Our Services"
 
 	if sc.Ctx.Request.URL.String() == "/admin/services" {
