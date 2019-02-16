@@ -1,6 +1,6 @@
 <div class="mainnav_full">
 	<div id="MainNav">
-		<a href="/" class="logo"><img src="images/inspiration.png" width="250" height="50" alt="" /></a>
+		<a href="/" class="logo"><img src="images/logo-kalimpongbroadband.png" width="250" height="50" alt="" /></a>
 		<div id="menu">
 			<ul class="ddsmoothmenu">
 				<li {{ if activeURI .URI "/" }}class="current-menu-item"{{ end }}>

@@ -129,7 +129,7 @@
         <div class="column">
           <h3>Ubiquity Power Beam</h3>
           <div class="gallery_item">
-            <img src="/images/ubiquity.jpg" width="214" height="194" class="cover" alt="" />
+            <img src="/images/500.png" width="214" height="194" class="cover" alt="" />
           </div>
         </div>
         <div class="column" data-place="2">
