@@ -9,5 +9,6 @@ import (
 
 func main() {
 	beego.AddFuncMap("activeURI", views.ActiveURI)
+	beego.AddFuncMap("htmlString", views.HtmlString)
 	beego.Run()
 }

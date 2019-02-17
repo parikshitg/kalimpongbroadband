@@ -8,7 +8,7 @@ import (
 )
 
 var filename = "kalimpongbroadband.db"
-var buckets = []string{PageBucket, ContactBucket, PlanBucket, ProductBucket}
+var buckets = []string{PageBucket, ContactBucket, PlanBucket, ProductBucket, ServiceBucket}
 
 var db *bolt.DB
 
