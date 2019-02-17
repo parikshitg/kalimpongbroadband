@@ -35,58 +35,23 @@
             </tr>
         </thead>
         <tbody>
-          <tr height="75px">
+          <!--<tr height="75px">
             <td><center>BROWSE+</center></td>
             <td><center>Alliance</center></td>
             <td><center> 12Mbps</center></td>
             <td><center>₹800/month</center></td>
             <td><center>₹9600/year </center></td>
-          </tr>
+          </tr>-->
           {{ range $p:= .Plans }}
           <tr height="75px">
             <td><center>{{ $p.Name }}</center></td>
             <td><center>{{ $p.Provider }}</center></td>
             <td><center>{{ $p.Speed }}</center></td>
-            <td><center>₹{{ $p.MonthlyRental }}/month</center></td>
-            <td><center>₹{{ $p.AnnualRental }}/year <br>+<br> 1 (free month)</center></td>
+            <td><center>₹{{ $p.MonthlyRental }}</center></td>
+            <td><center>₹{{ $p.AnnualRental }}</center></td>
           </tr>
           {{ end }}
-          <!--<tr class="odd" height="75px">
-            <td><center>Alliance</center></td>
-            <td><center>QUICK+</center></td>
-            <td><center>30 Mbps</center></td>
-            <td><center>₹1500/month</center></td>
-            <td><center>₹18000/year <br>+<br> 1 (free month)</center></td>
-          </tr>
-          <tr height="75px">
-            <td><center>Alliance</center></td>
-            <td><center>SWIFT+</center></td>
-            <td><center> Mbps</center></td>
-            <td><center>₹/month</center></td>
-            <td><center>₹/year <br>+<br> 1 (free month)</center></td>
-          </tr>
-          <tr class="odd" height="75px">
-            <td><center>Alliance</center></td>
-            <td><center>PACE+</center></td>
-            <td><center>25 Mbps</center></td>
-            <td><center>₹1000/month</center></td>
-            <td><center>₹12000/year <br>+<br> 1 (free month)</center></td>
-          </tr>
-          <tr height="75px">
-            <td><center>Alliance</center></td>
-            <td><center>RAPID+</center></td>
-            <td><center>75 Mbps</center></td>
-            <td><center>₹3000/month</center></td>
-            <td><center>₹36000/year <br>+<br> 1 (free month)</center></td>
-          </tr>
-          <tr class="odd" height="75px">
-            <td><center>Alliance</center></td>
-            <td><center>BLAZE+</center></td>
-            <td><center> Mbps</center></td>
-            <td><center>₹/month</center></td>
-            <td><center>₹/year <br>+<br> 1 (free month)</center></td>
-          </tr>-->
-          <tr height="75px">
+          <!--<tr height="75px">
             <td><center>SPEED+</center></td>
             <td><center>Galaxy</center></td>
             <td><center>4 Mbps</center></td>
@@ -99,7 +64,7 @@
             <td><center>12 Mbps</center></td>
             <td><center>₹1200/month</center></td>
             <td><center>₹1200/year</center></td>
-          </tr>
+          </tr>-->
         </tbody>
       </table>
 

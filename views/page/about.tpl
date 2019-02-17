@@ -31,7 +31,7 @@
       <ul>
         <li>
           <div class="portfolio_thumb">
-            <a href="http://www.youtube.com/watch?v=GgR6dyzkKHI" data-rel="prettyPhoto[gallery]"><img src="gallery/thumb/folio_3_01.jpg" width="277" height="154" alt="" class="pic" /><span class="hover_vid"></span></a>
+            <a href="http://www.youtube.com/watch?v=GgR6dyzkKHI" data-rel="prettyPhoto[gallery]"><img src="/images/urantiatech.png" width="277" height="154" alt="" class="pic" /><span class="hover_vid"></span></a>
           </div>
           <div class="portfolio_det">
             <h2><a href="portfolio_single.html">UrantiaTech</a></h2>
@@ -41,7 +41,7 @@
         </li>
         <li>
           <div class="portfolio_thumb">
-            <a href="http://vimeo.com/7449107" data-rel="prettyPhoto[gallery]"><img src="gallery/thumb/folio_3_02.jpg" width="277" height="154" alt="" class="pic" /><span class="hover_vid"></span></a>
+            <a href="http://vimeo.com/7449107" data-rel="prettyPhoto[gallery]"><img src="/images/alliance.png" width="277" height="154" alt="" class="pic" /><span class="hover_vid"></span></a>
           </div>
           <div class="portfolio_det">
             <h2><a href="portfolio_single.html">Alliance Broadband</a></h2>
@@ -51,7 +51,7 @@
         </li>
         <li>
           <div class="portfolio_thumb">
-            <a href="http://www.youtube.com/watch?v=1iIZeIy7TqM?width=640&height=360" data-rel="prettyPhoto[gallery]"><img src="gallery/thumb/folio_3_03.jpg" width="277" height="154" alt="" class="pic" /><span class="hover_vid"></span></a>
+            <a href="http://www.youtube.com/watch?v=1iIZeIy7TqM?width=640&height=360" data-rel="prettyPhoto[gallery]"><img src="/images/galaxy.png" width="277" height="154" alt="" class="pic" /><span class="hover_vid"></span></a>
           </div>
           <div class="portfolio_det">
             <h2><a href="portfolio_single.html">Gallaxy Broadband</a></h2>
