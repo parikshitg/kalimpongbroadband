@@ -35,13 +35,6 @@
             </tr>
         </thead>
         <tbody>
-          <!--<tr height="75px">
-            <td><center>BROWSE+</center></td>
-            <td><center>Alliance</center></td>
-            <td><center> 12Mbps</center></td>
-            <td><center>₹800/month</center></td>
-            <td><center>₹9600/year </center></td>
-          </tr>-->
           {{ range $p:= .Plans }}
           <tr height="75px">
             <td><center>{{ $p.Name }}</center></td>
@@ -51,24 +44,10 @@
             <td><center>₹{{ $p.AnnualRental }}</center></td>
           </tr>
           {{ end }}
-          <!--<tr height="75px">
-            <td><center>SPEED+</center></td>
-            <td><center>Galaxy</center></td>
-            <td><center>4 Mbps</center></td>
-            <td><center>₹₹800/month</center></td>
-            <td><center>₹9600/year </center></td>
-          </tr>
-          <tr class="odd" height="75px">
-            <td><center>FAST+</center></td>
-            <td><center>Galaxy</center></td>
-            <td><center>12 Mbps</center></td>
-            <td><center>₹1200/month</center></td>
-            <td><center>₹1200/year</center></td>
-          </tr>-->
         </tbody>
       </table>
 
-      <div class="portfolio_one_col">
+      <!--<div class="portfolio_one_col">
         <ul>
           <li>
             <div class="portfolio_thumb">
@@ -88,13 +67,13 @@
             <div class="clear"></div>
           </li>
         </ul>
-      </div>      
+      </div>       
 
       <div class="columns6">
         <div class="column">
           <h3>Ubiquity Power Beam</h3>
           <div class="gallery_item">
-            <img src="/images/500.png" width="214" height="194" class="cover" alt="" />
+            <img src="/uploads/500.png" width="214" height="194" class="cover" alt="" />
           </div>
         </div>
         <div class="column" data-place="2">
@@ -125,7 +104,7 @@
           </table>
         </div>
         <div class="clear"></div>
-      </div>
+      </div>-->
 
 
     <div class="portfolio_three_col">
@@ -138,7 +117,7 @@
       <ul>
         <li>
           <div class="portfolio_thumb">
-            <a href="http://www.youtube.com/watch?v=GgR6dyzkKHI" data-rel="prettyPhoto[gallery]"><img src="gallery/thumb/folio_3_01.jpg" width="277" height="154" alt="" class="pic" /><span class="hover_vid"></span></a>
+            <img src="" width="277" height="154" alt="" class="pic" /><span class="hover_vid"></span>
           </div>
           <div class="portfolio_det">
             <h2><a href="portfolio_single.html">Wireless Router</a></h2>
@@ -146,15 +125,14 @@
         </li>
         <li>
           <div class="portfolio_thumb">
-            <a href="http://vimeo.com/7449107" data-rel="prettyPhoto[gallery]"><img src="gallery/thumb/folio_3_02.jpg" width="277" height="154" alt="" class="pic" /><span class="hover_vid"></span></a>
-          </div>
+            <img src="" width="277" height="154" alt="" class="pic" /><span class="hover_vid"></span>          </div>
           <div class="portfolio_det">
             <h2><a href="portfolio_single.html">Internet Cable</a></h2>
           </div>
         </li>
         <li>
           <div class="portfolio_thumb">
-            <a href="http://www.youtube.com/watch?v=1iIZeIy7TqM?width=640&height=360" data-rel="prettyPhoto[gallery]"><img src="gallery/thumb/folio_3_03.jpg" width="277" height="154" alt="" class="pic" /><span class="hover_vid"></span></a>
+            <img src="" width="277" height="154" alt="" class="pic" /><span class="hover_vid"></span>
           </div>
           <div class="portfolio_det">
             <h2><a href="portfolio_single.html">1 Month Rental</a></h2>
@@ -169,7 +147,7 @@
       <ul>
         <li>
           <div class="portfolio_thumb">
-            <a href="http://www.youtube.com/watch?v=GgR6dyzkKHI" data-rel="prettyPhoto[gallery]"><img src="gallery/thumb/folio_3_01.jpg" width="277" height="154" alt="" class="pic" /><span class="hover_vid"></span></a>
+            <img src="" width="277" height="154" alt="" class="pic" /><span class="hover_vid"></span>
           </div>
           <div class="portfolio_det">
             <h2><a href="portfolio_single.html">Light Beam</a></h2>
@@ -179,7 +157,7 @@
         </li>
         <li>
           <div class="portfolio_thumb">
-            <a href="http://vimeo.com/7449107" data-rel="prettyPhoto[gallery]"><img src="gallery/thumb/folio_3_02.jpg" width="277" height="154" alt="" class="pic" /><span class="hover_vid"></span></a>
+            <img src="" width="277" height="154" alt="" class="pic" /><span class="hover_vid"></span>
           </div>
           <div class="portfolio_det">
             <h2><a href="portfolio_single.html">AirGate</a></h2>
@@ -189,7 +167,7 @@
         </li>
         <li>
           <div class="portfolio_thumb">
-            <a href="http://www.youtube.com/watch?v=1iIZeIy7TqM?width=640&height=360" data-rel="prettyPhoto[gallery]"><img src="gallery/thumb/folio_3_03.jpg" width="277" height="154" alt="" class="pic" /><span class="hover_vid"></span></a>
+            <img src="" width="277" height="154" alt="" class="pic" /><span class="hover_vid"></span>
           </div>
           <div class="portfolio_det">
             <h2><a href="portfolio_single.html">Ubiquity PowerBeam</a></h2>

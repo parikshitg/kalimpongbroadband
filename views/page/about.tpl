@@ -62,6 +62,28 @@
       </ul>
     </div>
 
+    <div class="columns">
+      <div class="column">
+        <h2 class="icon web">Works Everywhere</h2>
+        <p>Donec accumsan malesuada orcidonec sitmet<br>eros lorem isum dolor amet incon. Adipiscing elit maurise pharetra magna accumsan. Malesuada orcdonec umet lorem doloronsec.</p>
+        <a href="#" title="read more" class="btn alignleft">read more</a>
+        <div class="clear"></div>
+      </div>
+      <div class="column">
+        <h2 class="icon graph">Easy to Customize</h2>
+        <p>Donec accumsan malesuada orcidonec sitmet<br>eros lorem isum dolor amet incon. Adipiscing elit maurise pharetra magna accumsan. Malesuada orcdonec umet lorem doloronsec.</p>
+        <a href="#" title="read more" class="btn alignleft">read more</a>
+        <div class="clear"></div>
+      </div>
+      <div class="column">
+        <h2 class="icon book">Full Documentation</h2>
+        <p>Donec accumsan malesuada orcidonec sitmet<br>eros lorem isum dolor amet incon. Adipiscing elit maurise pharetra magna accumsan. Malesuada orcdonec umet lorem doloronsec.</p>
+        <a href="#" title="read more" class="btn alignleft">read more</a>
+        <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+
 		</div>
 
 
