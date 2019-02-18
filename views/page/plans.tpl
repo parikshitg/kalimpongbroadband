@@ -29,7 +29,7 @@
           <tr height="75px">
             <td><center>{{ $p.Name }}</center></td>
             <td><center>{{ $p.Provider }}</center></td>
-            <td><center>{{ $p.Speed }}</center></td>
+            <td><center>{{ $p.Speed }} Mbps</center></td>
             <td><center>₹{{ $p.MonthlyRental }}</center></td>
             <td><center>₹{{ $p.AnnualRental }}</center></td>
           </tr>

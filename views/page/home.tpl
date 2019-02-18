@@ -5,6 +5,8 @@
 <div class="content_wrapper">
 	<!-- Content Area -->
 	<div id="content">
+		<h1>Welcome to Kalimpong Broadband !!</h1>
+		<br>
 		<div class="columns">
 			<div class="column">
 				<img src="/images/router.png">

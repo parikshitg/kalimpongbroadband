@@ -22,7 +22,7 @@
 		<div class="columns">
 			<div class="column" data-place="2">
 				<h2>Get In Touch</h2>
-				<p>Let us know, if you are Interested in Kalimpong Broadband connection.<br>Send us you questions and queries, lets see what we can do for you.</p>
+				<p>Send us you questions and queries, lets see what we can do for you.</p>
 				<div class="hr_610"></div>
 				<h2>Send Us Mail</h2>
 				<!-- Start Contact Form -->
@@ -39,7 +39,7 @@
 						<input name="phone" type="text" id="phone" size="50" value="" /></p>
 						<p><label for="subject" accesskey="S">Subject</label>
 						<select name="subject" id="subject">
-						  <option value="Support">Get Connection</option>
+						  <option value="Support">New Connection</option>
 						  <option value="a Sale">Recharge</option>
 						  <option value="a Bug fix">Conectivity Issues</option>
 						  <option value="Ither">Other</option>
