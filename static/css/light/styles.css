@@ -140,7 +140,6 @@ h2.client		{background-image:url(/images/client.png);}
 h2.database		{background-image:url(/images/database.png);}
 h2.download		{background-image:url(/images/download.png);}
 h2.facebook		{background-image:url(/images/facebook.png);}
-h2.graph		{background-image:url(/images/fibre-cable.png);}
 h2.home			{background-image:url(/images/home.png);}
 h2.lock			{background-image:url(/images/lock.png);}
 h2.mail			{background-image:url(/images/mail.png);}
@@ -156,7 +155,6 @@ h2.tag			{background-image:url(/images/tag.png);}
 h2.twitter		{background-image:url(/images/twitter.png);}
 h2.user			{background-image:url(/images/user.png);}
 h2.wallet		{background-image:url(/images/wallet.png);}
-h2.web			{background-image:url(/images/router.png);}
 
 h3				{
 				font:20px Arial, Verdana, Helvetica, sans-serif;

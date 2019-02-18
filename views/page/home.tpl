@@ -7,18 +7,24 @@
 	<div id="content">
 		<div class="columns">
 			<div class="column">
-				<h2 class="icon web">Works Everywhere</h2>
-				<p>Donec accumsan malesuada orcidonec sitmet<br>eros lorem isum dolor amet incon. Adipiscing elit maurise pharetra magna accumsan. Malesuada orcdonec umet lorem doloronsec.</p>
+				<img src="/images/router.png">
+				<p></p>
+				<h2>Home Broadband Internet</h2>
+				<p></p>
 				<div class="clear"></div>
 			</div>
 			<div class="column">
-				<h2 class="icon graph">Easy to Customize</h2>
-				<p>Donec accumsan malesuada orcidonec sitmet<br>eros lorem isum dolor amet incon. Adipiscing elit maurise pharetra magna accumsan. Malesuada orcdonec umet lorem doloronsec.</p>
+				<img src="/images/fiber.png">
+				<p></p>
+				<h2>High-Speed Fiber Connection</h2>
+				<p></p>
 				<div class="clear"></div>
 			</div>
 			<div class="column">
-				<h2 class="icon book">Full Documentation</h2>
-				<p>Donec accumsan malesuada orcidonec sitmet<br>eros lorem isum dolor amet incon. Adipiscing elit maurise pharetra magna accumsan. Malesuada orcdonec umet lorem doloronsec.</p>
+				<img src="/images/wimax.png">
+				<p></p>
+				<h2>Remote Wireless Internet</h2>
+				<p></p>
 				<div class="clear"></div>
 			</div>
 			<div class="clear"></div>
@@ -26,18 +32,21 @@
 		<div class="hr"></div>
 		<div class="columns2">
 			<div class="column">
-				<h2>Unlimited Possibilities</h2>
-				<p class="dropcap-type1">A Nulla eget erat eget nibh accumsan rutrum eget sit amet arcu. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincint tristique mi, vitae vulputate elit aliquet at praesent in.</p>
+				<img src="/images/website.png">
+				<p></p>
+				<h2>Website Designing</h2>
 				<div class="clear"></div>
 			</div>
 			<div class="column">
-				<h2>Clean and Beautiful</h2>
-				<p class="dropcap-type2">B Nulla eget erat eget nibh accumsan rutrum eget sit amet arcu. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincint tristique mi, vitae vulputate elit aliquet at praesent in.</p>
+				<img src="/images/mobileapps.png">
+				<p></p>
+				<h2>Mobile App Development</h2>
 				<div class="clear"></div>
 			</div>
 			<div class="column">
-				<h2>Professional Services</h2>
-				<p class="dropcap-type3">C Nulla eget erat eget nibh accumsan rutrum eget sit amet arcu. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincint tristique mi, vitae vulputate elit aliquet at praesent in.</p>
+				<img src="/images/hosting.png">
+				<p></p>
+				<h2>Domain, Web Hosting, Email</h2>
 				<div class="clear"></div>
 			</div>
 			<div class="clear"></div>
