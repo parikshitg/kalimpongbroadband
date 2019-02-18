@@ -18,6 +18,7 @@
 		<img src="/images/location.png" width="940" height="300" alt="" />
 		</div>
 		<br>
+
 		<div class="columns">
 			<div class="column" data-place="2">
 				<h2>Get In Touch</h2>
@@ -51,28 +52,28 @@
 				</div>
 			</div>
 
-			<div class="column" style="float: right;">
-				<div class="widget-container widget_recent_projects">
+			<div class="column">
+				<div class="widget-container">
 					
 					<ul>
 						<li>
-							<img src="images/parikshitg.jpg" width="260" height="300" alt="" class="pic" />
-							<h2>CEO, Rajesh Jain</h2>
+							<img src="/images/rajesh.jpg" width="260" height="auto" alt="" class="pic" />
+							<br>
 							{{ with .Contact }}
-							<address>
-								<strong>Name:    </strong> {{ .Name }} <br />
-								<strong>Email:   </strong> {{ .Email }} <br/>
-								<strong>Phone:   </strong>   {{ .Phone1 }}, {{ .Phone2 }}<br />
-								<strong>Whatsapp:</strong> {{ .WhatsApp }} <br/>
-								<strong>Address:</strong> {{ .Address1 }}, {{ .Address2 }}, {{ .City }}, {{ .State }}, {{ .Pincode }}
-							</address>
+							<h2><strong>{{.Name}}</strong></h2>
+							<ul>
+								<li><strong>Email:   </strong> {{ .Email }}</li>
+								<li><strong>Phone:   </strong>   {{ .Phone1 }}, {{ .Phone2 }}</li>
+								<li><strong>Whatsapp:</strong> {{ .WhatsApp }}</li>
+								<li><strong>Address:</strong> {{ .Address1 }}, {{ .Address2 }}</li>
+								<li>{{ .City }}, {{ .State }}, {{ .Pincode }}</li>
+							</ul>
 							{{ end }}
 						</li>
 					</ul>
 					<div class="clear"></div>
 				</div>
 			</div>
-			<div class="clear"></div>
 		</div>
 
 

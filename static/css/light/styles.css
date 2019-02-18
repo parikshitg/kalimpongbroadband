@@ -545,7 +545,8 @@ a:hover.logo	{
 .footer_full	{
 				width:100%;
 				border-top:1px solid #0b0b0a;
-				background:url(/images/bg_dark.png) #1c1d20;
+				background-color: #232323;
+				/* background:url(/images/bg_dark.png) #1c1d20; */
 				}
 
 #footer			{
@@ -879,7 +880,6 @@ a:hover.logo	{
 
 .portfolio_two_col li .portfolio_thumb	{
 				width:457px;
-				height:240px;
 				margin-bottom:8px;
 				}
 
@@ -910,14 +910,12 @@ a:hover.logo	{
 
 .portfolio_three_col li .portfolio_thumb	{
 				width:293px;
-				height:200px;
 				margin-bottom:8px;
 				}
 
 .portfolio_three_col li .portfolio_thumb a	{
 				display:block;
 				width:293px;
-				height:170px;
 				position:relative;
 				z-index:99;
 				outline:none;
@@ -941,14 +939,12 @@ a:hover.logo	{
 
 .portfolio_four_col li .portfolio_thumb	{
 				width:213px;
-				height:230px;
 				margin-bottom:8px;
 				}
 
 .portfolio_four_col li .portfolio_thumb a	{
 				display:block;
 				width:213px;
-				height:170px;
 				position:relative;
 				z-index:99;
 				outline:none;
@@ -1535,7 +1531,7 @@ img:hover.pic	{
 #breadcrumbs	{
 				width:940px;
 				padding:0 0 20px;
-				font:11px Arial, Helvetica, sans-serif;
+				font:14px Arial, Helvetica, sans-serif;
 				text-transform:capitalize;
 				color:#808080;
 				}
