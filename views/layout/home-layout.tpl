@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-	<link rel="shortcut icon" href="img/favicon.ico" />
+	<link rel="shortcut icon" href="/images/favicon.png" />
 
 	<style type="text/css">
 		@import url(css/light/styles.css);		

@@ -1,6 +1,6 @@
 <div class="mainnav_full">
 	<div id="MainNav">
-		<a href="/" class="logo"><img src="images/logo.png" width="auto" height="44" alt="" /></a>
+		<a href="/" class="logo"><img src="/images/logo.png" width="auto" height="44" alt="" /></a>
 		<div id="menu">
 			<ul class="ddsmoothmenu">
 				<li {{ if activeURI .URI "/" }}class="current-menu-item"{{ end }}>
