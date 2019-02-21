@@ -6,7 +6,16 @@
 	<!-- Content Area -->
 	<div id="content">
 		<h1>Welcome to Kalimpong Broadband !!</h1>
+
+		<p></p>
+		<p>We are the leading Internet Service Provider in the entire Kalimpong District and offering high-speed Broadband Internet for home users and Optical-Fibre connection for commercial purpose like online gaming, CCTV etc where speed and reliability matters the most.  For remote area, we provide wireless internet using Ubiquiti PowerBeams. See our plans for mote details.</p>
+
+		<p>We are now also partnered with UrantiaTech, who design and host stunning websites using latest cloud-native technologies at an affordable rates.  We provide all types of IT related services, whether it is Software or Hardware.  Whether you need a website to promote your business, or you need a custom software solution, call us now at the number given below and see how we can bring your ideas into the reality.  </p>
+
+		<p>We are specialized in designing websites for Hotels & Homestays to promote tourism in and around Kalimpong district.  We can also list your hotel/homestay property in our own website NorthEastHomestay.in for free and boost your income by providing tourism business. Call us now and see what we can do for you. </p> 
+
 		<br>
+
 		<div class="columns">
 			<div class="column">
 				<img src="/images/router.png">
