@@ -3,13 +3,6 @@
 {{ define "title" }} Partners {{ end }}
 
 {{ define "contents" }}
-	<!--{{ if .Error }}{{ .Error}}{{ end }}
-	{{ if .Page }}
-		<h1>{{ .Page.Title }}</h1>
-		{{ .HtmlBody }}
-	{{ end }} -->
-
-
 <!-- Start Content Wrapper -->
 <div class="content_wrapper_sbr">
 	<div class="PageTitle">

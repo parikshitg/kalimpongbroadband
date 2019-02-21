@@ -3,7 +3,6 @@
 {{ define "title" }} Contact {{ end }}
 
 {{ define "contents" }}
-	
 <!-- Start Content Wrapper -->
 <div class="content_wrapper">
 	<div class="PageTitle">

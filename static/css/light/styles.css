@@ -104,7 +104,7 @@ small			{font-size:0.8em;}
 
 h1				{
 				font:36px Arial, Helvetica, sans-serif;
-				color:#FD7500;
+				/* color:#FD7500; */
 				line-height:0.5em;
 				margin-bottom:0.5em;
 				}

@@ -3,14 +3,7 @@
 {{ define "title" }} About {{ end }}
 
 {{ define "contents" }}
-	{{ if .Error }}{{ .Error}}{{ end }}
-	{{ if .Page }}
-		<!--<h1>{{ .Page.Title }}</h1>-->
-		<!--{{ .HtmlBody }} -->
-	{{ end }} 
-	
-
-	<!-- Start Content Wrapper -->
+		<!-- Start Content Wrapper -->
 	<div class="content_wrapper">
 		<div class="PageTitle">
 			<h1>About Us</h1>
