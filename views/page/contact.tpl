@@ -16,22 +16,22 @@
 		<div class="portfolio">
 		<img src="/images/location.png" width="940" height="300" alt="" />
 		</div>
+
 		<br>
+
+		{{ if .Flash }}
+		<div class="succsess_box">
+			<p>{{.Flash}}</p>
+		</div>
+		{{ end }}
+		{{ if .Error }}
+		<div class="error_box">
+			<p>{{.Error}}</p>
+		</div>
+		{{ end}}
 
 		<div class="columns">
 			<div class="column" data-place="2">
-
-				{{ if .Flash }}
-				<div class="succsess_box">
-					<p>{{.Flash}}</p>
-				</div>
-				{{ end }}
-				{{ if .Error }}
-				<div class="error_box">
-					<p>{{.Error}}</p>
-				</div>
-				{{ end}}
-
 				<h2>Get In Touch</h2>
 				<p>Send us you questions and queries, lets see what we can do for you.</p>
 				<div class="hr_610"></div>
@@ -39,6 +39,7 @@
 				<!-- Start Contact Form -->
 				<div id="contact">										
 					<form method="post" action="/contact" name="contactform" id="contactform">
+                    <input type="hidden" name="gorilla.csrf.Token" value="{{ .CSRFToken }}">
 					<fieldset>
 						<p><label for="name" accesskey="U"><span class="required">*</span> Your Name</label>
 						<input name="name" type="text" id="name" size="50" value="" /></p>

@@ -9,6 +9,7 @@ import (
 
 	"git.urantiatech.com/commercial/kalimpongbroadband/contents"
 	mailapi "git.urantiatech.com/mail/mail/api"
+	"github.com/gorilla/csrf"
 	"github.com/urantiatech/beego"
 )
 
@@ -22,6 +23,7 @@ func (cc *ContactController) Get() {
 	cc.TplName = "page/contact.tpl"
 	cc.Data["URI"] = "/contact"
 	cc.Data["Title"] = "Contact Us"
+	cc.Data["CSRFToken"] = csrf.Token(cc.Ctx.Request)
 
 	var contact = &contents.Contact{}
 	err := contact.Read("contact")
@@ -47,9 +49,9 @@ func (cc *ContactController) Post() {
 	body := cc.GetString("body")
 
 	mail := mailapi.Mail{
-		From:    "contact@kalimpongbroadband.com",
-		To:      "rajesh@kalimpongbroadband.com",
-		Cc:      "contact@kalimpongbroadband.com",
+		From:    "Rajesh Jain <rajesh@kalimpongbroadband.com>",
+		To:      "Rajesh Jain <rajesh@kalimpongbroadband.com>",
+		Cc:      "\"Sangeet Kumar\" <sk@urantiatech.com>, \"Parikshit Gothwal\" <parikshit@urantiatech.com>",
 		ReplyTo: fmt.Sprintf("%s <%s>", name, email),
 		Subject: subject,
 		HTML:    strings.Replace(body, "\n", "<br/>", -1),
@@ -57,7 +59,7 @@ func (cc *ContactController) Post() {
 
 	err := mailapi.SendMail(&mail, os.Getenv("MAIL_SVC"))
 	if err != nil {
-		log.Println(err.Error())
+		log.Println(err)
 		cc.Data["Error"] = "Couldn't send your messgae due to some technical problem."
 	} else {
 		cc.Data["Flash"] = "Your message has been sent."
@@ -70,7 +72,6 @@ func (cc *ContactController) Post() {
 		return
 	}
 	cc.Data["Contact"] = contact
-
 }
 
 // AdminGet request handler for admin
