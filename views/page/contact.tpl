@@ -20,15 +20,25 @@
 
 		<div class="columns">
 			<div class="column" data-place="2">
+
+				{{ if .Flash }}
+				<div class="succsess_box">
+					<p>{{.Flash}}</p>
+				</div>
+				{{ end }}
+				{{ if .Error }}
+				<div class="error_box">
+					<p>{{.Error}}</p>
+				</div>
+				{{ end}}
+
 				<h2>Get In Touch</h2>
 				<p>Send us you questions and queries, lets see what we can do for you.</p>
 				<div class="hr_610"></div>
 				<h2>Send Us Mail</h2>
 				<!-- Start Contact Form -->
-				<div id="contact">
-					<div id="message"></div>
-										
-					<form method="post" action="contact.php" name="contactform" id="contactform">
+				<div id="contact">										
+					<form method="post" action="/contact" name="contactform" id="contactform">
 					<fieldset>
 						<p><label for="name" accesskey="U"><span class="required">*</span> Your Name</label>
 						<input name="name" type="text" id="name" size="50" value="" /></p>
@@ -38,13 +48,14 @@
 						<input name="phone" type="text" id="phone" size="50" value="" /></p>
 						<p><label for="subject" accesskey="S">Subject</label>
 						<select name="subject" id="subject">
-						  <option value="Support">New Connection</option>
-						  <option value="a Sale">Recharge</option>
-						  <option value="a Bug fix">Conectivity Issues</option>
-						  <option value="Ither">Other</option>
+						  <option value="New Connection">New Connection</option>
+						  <option value="Recharge">Recharge</option>
+						  <option value="Connectivity Issues">Conectivity Issues</option>
+						  <option value="Other">Other</option>
 						</select></p>
-						<p><label for="comments" accesskey="C"><span class="required">*</span> Your comments</label>
-						<textarea name="comments"  rows="5" cols="40"  id="comments" style="width: 450px;"></textarea></p>
+						<p><label for="body" accesskey="C"><span class="required">*</span> Your inquiry</label>
+						<textarea name="body"  rows="5" cols="40"  id="body" style="width: 450px;"></textarea>
+						</p>
 						<p><input type="submit" class="submit" id="submit" value="Submit" /></p>
 					</fieldset>
 					</form>
@@ -53,10 +64,9 @@
 
 			<div class="column">
 				<div class="widget-container">
-					
+					<img src="/images/rajesh.jpg" width="260" height="auto" alt="" class="pic" />					
 					<ul>
 						<li>
-							<img src="/images/rajesh.jpg" width="260" height="auto" alt="" class="pic" />
 							<br>
 							{{ with .Contact }}
 							<h2><strong>{{.Name}}</strong></h2>

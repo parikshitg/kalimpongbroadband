@@ -1,9 +1,14 @@
 package controllers
 
 import (
+	"fmt"
+	"log"
 	"net/http"
+	"os"
+	"strings"
 
 	"git.urantiatech.com/commercial/kalimpongbroadband/contents"
+	mailapi "git.urantiatech.com/mail/mail/api"
 	"github.com/urantiatech/beego"
 )
 
@@ -14,18 +19,72 @@ type ContactController struct {
 
 // Get request handler
 func (cc *ContactController) Get() {
-	var contact = &contents.Contact{}
 	cc.TplName = "page/contact.tpl"
 	cc.Data["URI"] = "/contact"
 	cc.Data["Title"] = "Contact Us"
 
-	if cc.Ctx.Request.URL.String() == "/admin/contact" {
-		if err := Authenticate(cc.Ctx); err != nil {
-			cc.Redirect("/admin", http.StatusSeeOther)
-		}
-		cc.TplName = "admin/contact.tpl"
+	var contact = &contents.Contact{}
+	err := contact.Read("contact")
+	if err != nil {
+		cc.Data["Error"] = err.Error()
+		return
+	}
+	cc.Data["Contact"] = contact
+
+}
+
+// Post request handler
+func (cc *ContactController) Post() {
+	cc.TplName = "page/contact.tpl"
+	cc.Data["Title"] = "Contact Us"
+	cc.Data["URI"] = "/contact"
+
+	// Contact form submission
+	name := cc.GetString("name")
+	email := cc.GetString("email")
+	phone := cc.GetString("phone")
+	subject := fmt.Sprintf("[Contact Form - %s] %s - %s", cc.GetString("subject"), name, phone)
+	body := cc.GetString("body")
+
+	mail := mailapi.Mail{
+		From:    "contact@kalimpongbroadband.com",
+		To:      "rajesh@kalimpongbroadband.com",
+		Cc:      "contact@kalimpongbroadband.com",
+		ReplyTo: fmt.Sprintf("%s <%s>", name, email),
+		Subject: subject,
+		HTML:    strings.Replace(body, "\n", "<br/>", -1),
 	}
 
+	err := mailapi.SendMail(&mail, os.Getenv("MAIL_SVC"))
+	if err != nil {
+		log.Println(err.Error())
+		cc.Data["Error"] = "Couldn't send your messgae due to some technical problem."
+	} else {
+		cc.Data["Flash"] = "Your message has been sent."
+	}
+
+	var contact = &contents.Contact{}
+	err = contact.Read("contact")
+	if err != nil {
+		cc.Data["Error"] = err.Error()
+		return
+	}
+	cc.Data["Contact"] = contact
+
+}
+
+// AdminGet request handler for admin
+func (cc *ContactController) AdminGet() {
+	if err := Authenticate(cc.Ctx); err != nil {
+		cc.Redirect("/admin", http.StatusSeeOther)
+		return
+	}
+
+	cc.TplName = "admin/contact.tpl"
+	cc.Data["URI"] = "/contact"
+	cc.Data["Title"] = "Contact Us"
+
+	var contact = &contents.Contact{}
 	err := contact.Read("contact")
 	if err != nil {
 		cc.Data["Error"] = err.Error()
@@ -34,10 +93,16 @@ func (cc *ContactController) Get() {
 	cc.Data["Contact"] = contact
 }
 
-// Post request handler
-func (cc *ContactController) Post() {
+// AdminPost request handler for admin
+func (cc *ContactController) AdminPost() {
+	if err := Authenticate(cc.Ctx); err != nil {
+		cc.Redirect("/admin", http.StatusSeeOther)
+		return
+	}
+
 	cc.TplName = "admin/contact.tpl"
 	cc.Data["Title"] = "Contact Us"
+	cc.Data["URI"] = "/contact"
 
 	contact := &contents.Contact{
 		Slug:     "contact",

@@ -22,11 +22,6 @@
 	<!-- Initialise jQuery Library -->
 	<script type="text/javascript" src="/js/jquery.min.js"></script>
 	<script type="text/javascript" src="/js/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="js/cufon/cufon-yui.js"></script>
-
-	<!-- Theme Hook -->
-	<script type="text/javascript" src="/js/Includer.js"></script>
-	<script type="text/javascript">Cufon.now();</script>
 
 </body>
 </html>

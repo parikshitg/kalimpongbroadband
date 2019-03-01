@@ -34,7 +34,7 @@ func init() {
 		beego.Router("/admin/product", &controllers.ProductController{})
 		beego.Router("/admin/products", &controllers.ProductsController{})
 		beego.Router("/admin/partners", &controllers.PartnersController{})
-		beego.Router("/admin/contact", &controllers.ContactController{})
+		beego.Router("/admin/contact", &controllers.ContactController{}, "get:AdminGet;post:AdminPost")
 		beego.Router("/admin/settings", &controllers.SettingsController{})
 		beego.Router("/admin/logout", &controllers.LogoutController{})
 
