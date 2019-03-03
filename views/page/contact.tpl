@@ -66,7 +66,7 @@
 			<div class="column">
 				<div class="widget-container">
 					{{ with .Contact }}
-					<img src="{{with .Image}}/uploads/{{.}}{{else}}/static/img/product.jpg{{end}}" width="260" height="auto" alt="" class="pic" />					
+					<img src="{{with .Image}}/uploads/{{.}}{{else}}/static/img/contact.jpg{{end}}" width="260" height="auto" alt="" class="pic" />					
 					<ul>
 						<li>
 							<br>
@@ -79,9 +79,9 @@
 								<li><strong>Address:</strong> {{ .Address1 }}, {{ .Address2 }}</li>
 								<li>{{ .City }}, {{ .State }}, {{ .Pincode }}</li>
 							</ul>
-							{{ end }}
 						</li>
 					</ul>
+					{{ end }}
 					<div class="clear"></div>
 				</div>
 			</div>
