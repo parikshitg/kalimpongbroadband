@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"fmt"
+	"io"
 	"log"
 	"net/http"
 	"os"
@@ -60,7 +61,7 @@ func (cc *ContactController) Post() {
 	err := mailapi.SendMail(&mail, os.Getenv("MAIL_SVC"))
 	if err != nil {
 		log.Println(err)
-		cc.Data["Error"] = "Couldn't send your messgae due to some technical problem."
+		cc.Data["Error"] = "Couldn't send your message due to some technical problem."
 	} else {
 		cc.Data["Flash"] = "Your message has been sent."
 	}
@@ -118,11 +119,30 @@ func (cc *ContactController) AdminPost() {
 		City:     cc.GetString("city"),
 		State:    cc.GetString("state"),
 		Pincode:  cc.GetString("pincode"),
+		Image:    cc.GetString("oldimage"),
+	}
+	cc.Data["Contact"] = contact
+
+	file, header, err := cc.GetFile("image")
+	if err == nil {
+		//create destination file making sure the path is writeable.
+		dst, err := os.Create("uploads/" + header.Filename)
+		defer dst.Close()
+		if err != nil {
+			cc.Data["Error"] = "Error:" + err.Error()
+			return
+		}
+		//copy the uploaded file to the destination file
+		if _, err := io.Copy(dst, file); err != nil {
+			cc.Data["Error"] = "Can't copy file: " + dst.Name()
+			return
+		}
+		contact.Image = header.Filename
 	}
 
-	err := contact.Write(contact.Slug)
+	err = contact.Write(contact.Slug)
 	if err != nil {
 		cc.Data["Error"] = err.Error()
 	}
-	cc.Data["Contact"] = contact
+	//cc.Data["Contact"] = contact
 }

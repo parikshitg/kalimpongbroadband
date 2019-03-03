@@ -65,11 +65,12 @@
 
 			<div class="column">
 				<div class="widget-container">
-					<img src="/images/rajesh.jpg" width="260" height="auto" alt="" class="pic" />					
+					{{ with .Contact }}
+					<img src="{{with .Image}}/uploads/{{.}}{{else}}/static/img/product.jpg{{end}}" width="260" height="auto" alt="" class="pic" />					
 					<ul>
 						<li>
 							<br>
-							{{ with .Contact }}
+							
 							<h2><strong>{{.Name}}</strong></h2>
 							<ul>
 								<li><strong>Email:   </strong> {{ .Email }}</li>
