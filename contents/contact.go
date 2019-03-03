@@ -25,6 +25,7 @@ type Contact struct {
 	City     string `json:"city"`
 	State    string `json:"state"`
 	Pincode  string `json:"pincode"`
+	Image    string `json:"image"`
 }
 
 // Read contact information from DB

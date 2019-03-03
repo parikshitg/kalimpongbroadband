@@ -5,7 +5,7 @@
         <div class="columns is-multiline">
           <div class="column is-9">
 
-          	<form method="POST" action="/admin/contact">
+          	<form method="POST" action="/admin/contact" enctype="multipart/form-data">
 
 	            <div class="field is-horizontal">
 	              <div class="field-label is-normal">
@@ -141,6 +141,29 @@
 	            </div>
 
 	            <br>
+
+	            {{ with .Contact}}
+		        	{{ with .Image}}
+			        <input type="hidden" name="oldimage" value="{{.}}">
+			        <img src="/uploads/{{.}}" width="100px" height="auto">
+			        {{ else }}
+			        <img src="/static/img/contact.jpg" width="100px" height="auto">
+		        	{{ end }}
+		        {{end}}
+
+				<div class="file">
+				  <label class="file-label">
+				    <input class="file-input" type="file" id="image" name="image" value="{{with .Contact}}{{.Image}}{{end}}">
+				    <span class="file-cta">
+				      <span class="file-icon">
+				        <i class="fa fa-upload"></i>
+				      </span>
+				      <span class="file-label">
+				        Select Image
+				      </span>
+				    </span>
+				  </label>
+				</div>
 
 	            <div class="field is-horizontal">
 	              <div class="field-label is-normal">
