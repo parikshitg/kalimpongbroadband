@@ -18,7 +18,7 @@
 				{{ range $i, $p := .Services }}
 				<li>
 					<div class="portfolio_thumb">
-						<img src="{{with $p.Image}}/uploads/{{.}}{{else}}/static/img/service.jpg{{end}}" width="277" height="auto"  class="pic" />
+						<img src="{{with $p.Image}}/uploads/services/{{.}}{{else}}/static/img/service.jpg{{end}}" width="277" height="auto"  class="pic" />
 					</div>
 					<div class="portfolio_det">
 						<h2>{{$p.Name}}</h2>

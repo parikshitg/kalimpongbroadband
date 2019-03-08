@@ -22,7 +22,7 @@
         {{ with .Service}}
         	{{ with .Image}}
 	        <input type="hidden" name="oldimage" value="{{.}}">
-	        <img src="/uploads/{{.}}" width="100px" height="auto">
+	        <img src="/uploads/service/{{.}}" width="100px" height="auto">
 	        {{ else }}
 	        <img src="/static/img/product.jpg" width="100px" height="auto">
         	{{ end }}

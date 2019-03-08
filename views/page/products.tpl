@@ -18,7 +18,7 @@
 					{{ range $i, $p := .Products }}
 					<li>
 						<div class="portfolio_thumb">
-							<img src="{{with $p.Image}}/uploads/{{.}}{{else}}/static/img/product.jpg{{end}}" width="210" class="pic" />
+							<img src="{{with $p.Image}}/uploads/products/{{.}}{{else}}/static/img/product.jpg{{end}}" width="210" class="pic" />
 						</div>
 						<div class="portfolio_det">
 							<h2>{{ $p.Name }}</h2>

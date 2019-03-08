@@ -145,7 +145,7 @@
 	            {{ with .Contact}}
 		        	{{ with .Image}}
 			        <input type="hidden" name="oldimage" value="{{.}}">
-			        <img src="/uploads/{{.}}" width="100px" height="auto">
+			        <img src="/uploads/contact/{{.}}" width="100px" height="auto">
 			        {{ else }}
 			        <img src="/static/img/contact.jpg" width="100px" height="auto">
 		        	{{ end }}

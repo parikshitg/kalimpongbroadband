@@ -124,8 +124,14 @@ func (cc *ContactController) AdminPost() {
 
 	file, header, err := cc.GetFile("image")
 	if err == nil {
+		// Create path
+		path := "uploads/contact/"
+		if err := os.MkdirAll(path, os.ModeDir|os.ModePerm); err != nil {
+			log.Fatal(err)
+		}
+
 		//create destination file making sure the path is writeable.
-		dst, err := os.Create("uploads/" + header.Filename)
+		dst, err := os.Create(path + header.Filename)
 
 		if err != nil {
 			cc.Data["Error"] = "Error:" + err.Error()

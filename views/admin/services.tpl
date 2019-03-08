@@ -17,7 +17,7 @@
 				{{ range $i, $p := .Services }}
                 <tr>
                   <th>{{$p.ID}}</th>
-                  <td><img src="{{with $p.Image}}/uploads/{{.}}{{else}}/static/img/service.jpg{{end}}" width="100px" height="auto"></td>
+                  <td><img src="{{with $p.Image}}/uploads/services/{{.}}{{else}}/static/img/service.jpg{{end}}" width="100px" height="auto"></td>
                   <td>{{$p.Slug}}</td>
                   <td>{{$p.Name}}</td>
                   <td>
