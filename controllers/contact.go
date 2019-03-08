@@ -127,7 +127,7 @@ func (cc *ContactController) AdminPost() {
 		// Create path
 		path := "uploads/contact/"
 		if err := os.MkdirAll(path, os.ModeDir|os.ModePerm); err != nil {
-			return
+			log.Fatal(err)
 		}
 
 		//create destination file making sure the path is writeable.

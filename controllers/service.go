@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"io"
+	"log"
 	"net/http"
 	"os"
 
@@ -68,7 +69,7 @@ func (pc *ServiceController) Post() {
 		// Create path
 		path := "uploads/services/"
 		if err := os.MkdirAll(path, os.ModeDir|os.ModePerm); err != nil {
-			return
+			log.Fatal(err)
 		}
 
 		//create destination file making sure the path is writeable.
