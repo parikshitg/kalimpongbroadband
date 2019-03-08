@@ -65,8 +65,14 @@ func (pc *ServiceController) Post() {
 
 	file, header, err := pc.GetFile("image")
 	if err == nil {
+		// Create path
+		path := "uploads/services/"
+		if err := os.MkdirAll(path, os.ModeDir|os.ModePerm); err != nil {
+			return
+		}
+
 		//create destination file making sure the path is writeable.
-		dst, err := os.Create("uploads/" + header.Filename)
+		dst, err := os.Create(path + header.Filename)
 		defer dst.Close()
 		if err != nil {
 			pc.Data["Error"] = "Error:" + err.Error()
