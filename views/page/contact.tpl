@@ -14,7 +14,28 @@
 	<!-- Content Area -->
 	<div id="content">
 		<div class="portfolio">
-		<img src="/images/location.png" width="940" height="300" alt="" />
+			<div id="map_canvas"  style="height:300px; width:940px;"></div>
+			<!-- <img src="/images/location.png" width="940" height="300" alt="" />  -->
+			{{ with .Contact }}
+			<script type="text/javascript">
+				// Initialize and add the map
+				function initMap() {
+					// The location of location
+					var location = {
+						 lat:  {{ .Latitude }},
+						 lng:  {{ .Longitude }} 
+						};
+					// The map, centered at location
+					var map = new google.maps.Map(
+					    document.getElementById('map_canvas'), {zoom: 4, center: location});
+					// The marker, positioned at location
+					var marker = new google.maps.Marker({position: location, map: map});
+				}
+			</script>
+			<script async defer
+			    src="https://maps.googleapis.com/maps/api/js?key={{.GoogleMapKey}}&callback=initMap">
+			</script>
+			{{ end }}
 		</div>
 
 		<br>
@@ -38,7 +59,7 @@
 				<h2>Send Us Mail</h2>
 				<!-- Start Contact Form -->
 				<div id="contact">										
-					<form method="post" action="/contact" name="contactform" id="contactform">
+					<form method="post" action="/contact" name="contactform" >
                     <input type="hidden" name="gorilla.csrf.Token" value="{{ .CSRFToken }}">
 					<fieldset>
 						<p><label for="name" accesskey="U"><span class="required">*</span> Your Name</label>
@@ -86,8 +107,6 @@
 				</div>
 			</div>
 		</div>
-
-
 	<div class="clear"></div>
 	</div>
 </div>

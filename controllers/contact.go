@@ -121,6 +121,9 @@ func (cc *ContactController) AdminPost() {
 		Pincode:  cc.GetString("pincode"),
 		Image:    cc.GetString("oldimage"),
 	}
+	contact.Latitude, _ = cc.GetFloat("latitude")
+	contact.Longitude, _ = cc.GetFloat("longitude")
+	contact.GoogleMapKey = cc.GetString("googlemapkey")
 
 	file, header, err := cc.GetFile("image")
 	if err == nil {

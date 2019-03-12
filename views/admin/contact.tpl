@@ -140,30 +140,81 @@
 	              </div>
 	            </div>
 
+	            <div class="field is-horizontal">
+	              <div class="field-label is-normal">
+	                <label class="label">GPS Coordinates</label>
+	              </div>
+	              <div class="field-body">
+	                <div class="field">
+	                  <p class="control is-expanded has-icons-left">
+	                    <input class="input" type="text" name="latitude" value="{{ with .Contact}}{{.Latitude}}{{end}}" placeholder="Latitude">
+	                    <span class="icon is-small is-left">
+	                      <i class="fa fa-arrows-v"></i>
+	                    </span>
+	                  </p>
+	                </div>
+	                <div class="field">
+	                  <p class="control is-expanded has-icons-left has-icons-right">
+	                    <input class="input" type="text" name="longitude" value="{{ with .Contact}}{{.Longitude}}{{end}}" placeholder="Longitude">
+	                    <span class="icon is-small is-left">
+	                      <i class="fa fa-arrows-h"></i>
+	                    </span>
+	                  </p>
+	                </div>
+	              </div>
+	            </div>
+
+	            <div class="field is-horizontal">
+	              <div class="field-label is-normal">
+	                <label class="label">Google Map Key</label>
+	              </div>
+	              <div class="field-body">
+	                <div class="field">
+	                  <p class="control is-expanded has-icons-left">
+	                    <input class="input" type="text" name="googlemapkey" value="{{ with .Contact}}{{.GoogleMapKey}}{{end}}" placeholder="Google Map Key">
+	                    <span class="icon is-small is-left">
+	                      <i class="fa fa-map"></i>
+	                    </span>
+	                  </p>
+	                </div>
+	              </div>
+	            </div>
+
+
+	            <div class="field is-horizontal">
+	              <div class="field-label is-normal">
+	                <label class="label">Image</label>
+	              </div>
+	              <div class="field-body">
+	                <div class="field">
+	                  <p class="control is-expanded has-icons-left">
+			            {{ with .Contact}}
+							{{ with .Image}}
+					        <input type="hidden" name="oldimage" value="{{.}}">
+					        <img src="/uploads/contact/{{.}}" width="200px" height="auto">
+					        {{ else }}
+					        <img src="/static/img/contact.jpg" width="200px" height="auto">
+							{{ end }}
+				        {{end}}
+						<div class="file">
+						  <label class="file-label">
+						    <input class="file-input" type="file" id="image" name="image" value="{{with .Contact}}{{.Image}}{{end}}">
+						    <span class="file-cta">
+						      <span class="file-icon">
+						        <i class="fa fa-upload"></i>
+						      </span>
+						      <span class="file-label">
+						        Select Image
+						      </span>
+						    </span>
+						  </label>
+						</div>
+	                  </p>
+	                </div>
+	              </div>
+	            </div>
 	            <br>
 
-	            {{ with .Contact}}
-		        	{{ with .Image}}
-			        <input type="hidden" name="oldimage" value="{{.}}">
-			        <img src="/uploads/contact/{{.}}" width="100px" height="auto">
-			        {{ else }}
-			        <img src="/static/img/contact.jpg" width="100px" height="auto">
-		        	{{ end }}
-		        {{end}}
-
-				<div class="file">
-				  <label class="file-label">
-				    <input class="file-input" type="file" id="image" name="image" value="{{with .Contact}}{{.Image}}{{end}}">
-				    <span class="file-cta">
-				      <span class="file-icon">
-				        <i class="fa fa-upload"></i>
-				      </span>
-				      <span class="file-label">
-				        Select Image
-				      </span>
-				    </span>
-				  </label>
-				</div>
 
 	            <div class="field is-horizontal">
 	              <div class="field-label is-normal">
