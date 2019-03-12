@@ -12,20 +12,23 @@ const ContactBucket = "contacts"
 
 // Contact infomation
 type Contact struct {
-	ID       uint64 `json:"id"`
-	Slug     string `json:"slug"`
-	Name     string `json:"name"`
-	Email    string `json:"email"`
-	Phone1   string `json:"phone1"`
-	Phone2   string `json:"phone2"`
-	Phone3   string `json:"phone3"`
-	WhatsApp string `json:"whatsapp"`
-	Address1 string `json:"address1"`
-	Address2 string `json:"address2"`
-	City     string `json:"city"`
-	State    string `json:"state"`
-	Pincode  string `json:"pincode"`
-	Image    string `json:"image"`
+	ID           uint64  `json:"id"`
+	Slug         string  `json:"slug"`
+	Name         string  `json:"name"`
+	Email        string  `json:"email"`
+	Phone1       string  `json:"phone1"`
+	Phone2       string  `json:"phone2"`
+	Phone3       string  `json:"phone3"`
+	WhatsApp     string  `json:"whatsapp"`
+	Address1     string  `json:"address1"`
+	Address2     string  `json:"address2"`
+	City         string  `json:"city"`
+	State        string  `json:"state"`
+	Pincode      string  `json:"pincode"`
+	Latitude     float64 `json:"latitude"`
+	Longitude    float64 `json:"longitude"`
+	GoogleMapKey string  `json:"googlemapkey"`
+	Image        string  `json:"image"`
 }
 
 // Read contact information from DB
