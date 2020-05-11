@@ -1,0 +1,7 @@
+.DS_Store
+conf/app.conf
+conf/app.conf.example
+db/*
+uploads/*
+static/badmin/yarn.lock
+kalimpongbroadband
