@@ -3,6 +3,4 @@ conf/app.conf
 db/*
 uploads/*
 kalimpongbroadband
-Makefile
-Dockerfile
 inspiration/*
