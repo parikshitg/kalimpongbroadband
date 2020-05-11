@@ -3,8 +3,8 @@ package controllers
 import (
 	"net/http"
 
-	"git.urantiatech.com/commercial/kalimpongbroadband/contents"
-	"github.com/urantiatech/beego"
+	"github.com/astaxie/beego"
+	"github.com/parikshitg/kalimpongbroadband/contents"
 )
 
 // ServicesController definition

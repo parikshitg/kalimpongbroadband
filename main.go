@@ -1,10 +1,10 @@
 package main
 
 import (
-	_ "git.urantiatech.com/commercial/kalimpongbroadband/contents"
-	_ "git.urantiatech.com/commercial/kalimpongbroadband/routers"
-	"git.urantiatech.com/commercial/kalimpongbroadband/views"
-	"github.com/urantiatech/beego"
+	"github.com/astaxie/beego"
+	_ "github.com/parikshitg/kalimpongbroadband/contents"
+	_ "github.com/parikshitg/kalimpongbroadband/routers"
+	"github.com/parikshitg/kalimpongbroadband/views"
 )
 
 func main() {

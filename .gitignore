@@ -4,4 +4,5 @@ conf/app.conf.example
 db/*
 uploads/*
 static/badmin/yarn.lock
+static/badmin/package.json
 kalimpongbroadband

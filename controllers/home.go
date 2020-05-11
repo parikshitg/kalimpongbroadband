@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"github.com/urantiatech/beego"
+	"github.com/astaxie/beego"
 )
 
 // HomeController definition

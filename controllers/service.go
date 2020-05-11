@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"os"
 
-	"git.urantiatech.com/commercial/kalimpongbroadband/contents"
 	"git.urantiatech.com/pkg/slug"
-	"github.com/urantiatech/beego"
+	"github.com/astaxie/beego"
+	"github.com/parikshitg/kalimpongbroadband/contents"
 )
 
 // ServiceController definition

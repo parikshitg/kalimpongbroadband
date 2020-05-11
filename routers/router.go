@@ -1,8 +1,8 @@
 package routers
 
 import (
-	"git.urantiatech.com/commercial/kalimpongbroadband/controllers"
-	"github.com/urantiatech/beego"
+	"github.com/astaxie/beego"
+	"github.com/parikshitg/kalimpongbroadband/controllers"
 )
 
 func init() {

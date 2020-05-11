@@ -3,8 +3,8 @@ package controllers
 import (
 	"errors"
 
-	"github.com/urantiatech/beego"
-	"github.com/urantiatech/beego/context"
+	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/context"
 )
 
 // AdminController definition

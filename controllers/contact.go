@@ -8,10 +8,10 @@ import (
 	"os"
 	"strings"
 
-	"git.urantiatech.com/commercial/kalimpongbroadband/contents"
 	mailapi "git.urantiatech.com/mail/mail/api"
+	"github.com/astaxie/beego"
 	"github.com/gorilla/csrf"
-	"github.com/urantiatech/beego"
+	"github.com/parikshitg/kalimpongbroadband/contents"
 )
 
 // ContactController definition

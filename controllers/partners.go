@@ -4,8 +4,8 @@ import (
 	"html/template"
 	"net/http"
 
-	"git.urantiatech.com/commercial/kalimpongbroadband/contents"
-	"github.com/urantiatech/beego"
+	"github.com/astaxie/beego"
+	"github.com/parikshitg/kalimpongbroadband/contents"
 )
 
 // PartnersController definition
