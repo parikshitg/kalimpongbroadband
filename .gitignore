@@ -1,5 +1,6 @@
 .DS_Store
 conf/app.conf
+conf/app.conf.example
 db/*
 uploads/*
 kalimpongbroadband
